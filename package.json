@@ -1,0 +1,15 @@
+{
+  "name": "pagarme-tokens",
+  "version": "1.0.0",
+  "description": "Style Dictionary for Pagar.me Banking App and Platforms" ,
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "style-dictionary": "^3.0.2"
+  },
+  "scripts": {
+    "build": "node config.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

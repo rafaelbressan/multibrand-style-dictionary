@@ -1,0 +1,26 @@
+{
+    "button": {
+        "styleType": {
+            "filled": {
+                "small": {
+                    "states": {
+                        "default":{
+                            "fontFamily": "{font.button.default.value.fontFamily}"
+                    }
+                },
+                "default": {},
+                "large": {}
+            },
+            "outlined": {
+                "small": {},
+                "default": {},
+                "large": {}
+            },
+            "text": {
+                "small": {},
+                "default": {},
+                "large": {}
+            }
+        }
+    }
+}
