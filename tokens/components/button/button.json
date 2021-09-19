@@ -4,22 +4,23 @@
             "filled": {
                 "small": {
                     "states": {
-                        "default":{
+                        "default": {
                             "fontFamily": "{font.button.default.value.fontFamily}"
-                    }
+                        }
+                    },
+                    "default": {},
+                    "large": {}
                 },
-                "default": {},
-                "large": {}
-            },
-            "outlined": {
-                "small": {},
-                "default": {},
-                "large": {}
-            },
-            "text": {
-                "small": {},
-                "default": {},
-                "large": {}
+                "outlined": {
+                    "small": {},
+                    "default": {},
+                    "large": {}
+                },
+                "text": {
+                    "small": {},
+                    "default": {},
+                    "large": {}
+                }
             }
         }
     }

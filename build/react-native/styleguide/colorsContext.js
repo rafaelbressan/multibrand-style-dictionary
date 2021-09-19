@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Sep 2021 18:20:04 GMT
+ * Generated on Sun, 19 Sep 2021 23:09:55 GMT
  * Made by Pagar.me BaaS
  */
 
@@ -8,347 +8,328 @@ var colorsContext = {
   "color": {
     "context": {
       "primary": {
-        "pickleRickGreen": {
-          "20": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#ecffce",
+        "20": {
+          "description": null,
+          "type": "color",
+          "value": "#ecffce",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
             "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(236, 255, 206, 1)",
-              "type": "color"
-            },
-            "name": "colorContextPrimaryPickleRickGreen20",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "primary",
-              "subitem": "pickleRickGreen",
-              "state": "20"
-            },
-            "path": [
-              "color",
-              "context",
-              "primary",
-              "pickleRickGreen",
-              "20"
-            ]
+            "value": "#ecffceff"
           },
-          "50": {
+          "name": "colorContextPrimary20",
+          "attributes": {
             "category": "color",
-            "exportKey": "color",
-            "value": "#7fcc00",
-            "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(127, 204, 0, 1)",
-              "type": "color"
-            },
-            "name": "colorContextPrimaryPickleRickGreen50",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "primary",
-              "subitem": "pickleRickGreen",
-              "state": "50"
-            },
-            "path": [
-              "color",
-              "context",
-              "primary",
-              "pickleRickGreen",
-              "50"
-            ]
+            "type": "context",
+            "item": "primary",
+            "subitem": "20"
           },
-          "100": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#65a300",
+          "path": [
+            "color",
+            "context",
+            "primary",
+            "20"
+          ]
+        },
+        "50": {
+          "description": null,
+          "type": "color",
+          "value": "#7fcc00",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
             "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(101, 163, 0, 1)",
-              "type": "color"
-            },
-            "name": "colorContextPrimaryPickleRickGreen100",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "primary",
-              "subitem": "pickleRickGreen",
-              "state": "100"
-            },
-            "path": [
-              "color",
-              "context",
-              "primary",
-              "pickleRickGreen",
-              "100"
-            ]
+            "value": "#7fcc00ff"
           },
-          "200": {
+          "name": "colorContextPrimary50",
+          "attributes": {
             "category": "color",
-            "exportKey": "color",
-            "value": "#4f7f00",
-            "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(79, 127, 0, 1)",
-              "type": "color"
-            },
-            "name": "colorContextPrimaryPickleRickGreen200",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "primary",
-              "subitem": "pickleRickGreen",
-              "state": "200"
-            },
-            "path": [
-              "color",
-              "context",
-              "primary",
-              "pickleRickGreen",
-              "200"
-            ]
+            "type": "context",
+            "item": "primary",
+            "subitem": "50"
           },
-          "800": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#3a591a",
+          "path": [
+            "color",
+            "context",
+            "primary",
+            "50"
+          ]
+        },
+        "100": {
+          "description": null,
+          "type": "color",
+          "value": "#65a300",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
             "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(58, 89, 26, 1)",
-              "type": "color"
-            },
-            "name": "colorContextPrimaryPickleRickGreen800",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "primary",
-              "subitem": "pickleRickGreen",
-              "state": "800"
-            },
-            "path": [
-              "color",
-              "context",
-              "primary",
-              "pickleRickGreen",
-              "800"
-            ]
-          }
+            "value": "#65a300ff"
+          },
+          "name": "colorContextPrimary100",
+          "attributes": {
+            "category": "color",
+            "type": "context",
+            "item": "primary",
+            "subitem": "100"
+          },
+          "path": [
+            "color",
+            "context",
+            "primary",
+            "100"
+          ]
+        },
+        "200": {
+          "description": null,
+          "type": "color",
+          "value": "#4f7f00",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
+            "type": "color",
+            "value": "#4f7f00ff"
+          },
+          "name": "colorContextPrimary200",
+          "attributes": {
+            "category": "color",
+            "type": "context",
+            "item": "primary",
+            "subitem": "200"
+          },
+          "path": [
+            "color",
+            "context",
+            "primary",
+            "200"
+          ]
+        },
+        "800": {
+          "description": null,
+          "type": "color",
+          "value": "#3a591a",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
+            "type": "color",
+            "value": "#3a591aff"
+          },
+          "name": "colorContextPrimary800",
+          "attributes": {
+            "category": "color",
+            "type": "context",
+            "item": "primary",
+            "subitem": "800"
+          },
+          "path": [
+            "color",
+            "context",
+            "primary",
+            "800"
+          ]
         },
         "onPrimary": {
-          "highPriority": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#ffffff",
+          "base": {
+            "description": null,
             "type": "color",
+            "value": "#ffffff",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(255, 255, 255, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#ffffffff"
             },
-            "name": "colorContextPrimaryOnPrimaryHighPriority",
+            "name": "colorContextPrimaryOnPrimaryBase",
             "attributes": {
               "category": "color",
               "type": "context",
               "item": "primary",
               "subitem": "onPrimary",
-              "state": "highPriority"
+              "state": "base"
             },
             "path": [
               "color",
               "context",
               "primary",
               "onPrimary",
-              "highPriority"
+              "base"
             ]
           }
         }
       },
       "secondary": {
-        "barneyPurple": {
-          "20": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#dfd5ff",
+        "20": {
+          "description": null,
+          "type": "color",
+          "value": "#dfd5ff",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
             "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(223, 213, 255, 1)",
-              "type": "color"
-            },
-            "name": "colorContextSecondaryBarneyPurple20",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "secondary",
-              "subitem": "barneyPurple",
-              "state": "20"
-            },
-            "path": [
-              "color",
-              "context",
-              "secondary",
-              "barneyPurple",
-              "20"
-            ]
+            "value": "#dfd5ffff"
           },
-          "50": {
+          "name": "colorContextSecondary20",
+          "attributes": {
             "category": "color",
-            "exportKey": "color",
-            "value": "#8267d3",
-            "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(130, 103, 211, 1)",
-              "type": "color"
-            },
-            "name": "colorContextSecondaryBarneyPurple50",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "secondary",
-              "subitem": "barneyPurple",
-              "state": "50"
-            },
-            "path": [
-              "color",
-              "context",
-              "secondary",
-              "barneyPurple",
-              "50"
-            ]
+            "type": "context",
+            "item": "secondary",
+            "subitem": "20"
           },
-          "100": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#6045af",
+          "path": [
+            "color",
+            "context",
+            "secondary",
+            "20"
+          ]
+        },
+        "50": {
+          "description": null,
+          "type": "color",
+          "value": "#8267d3",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
             "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(96, 69, 175, 1)",
-              "type": "color"
-            },
-            "name": "colorContextSecondaryBarneyPurple100",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "secondary",
-              "subitem": "barneyPurple",
-              "state": "100"
-            },
-            "path": [
-              "color",
-              "context",
-              "secondary",
-              "barneyPurple",
-              "100"
-            ]
+            "value": "#8267d3ff"
           },
-          "200": {
+          "name": "colorContextSecondary50",
+          "attributes": {
             "category": "color",
-            "exportKey": "color",
-            "value": "#3f2787",
-            "type": "color",
-            "filePath": "tokens/styleguide/color/colors.json",
-            "isSource": true,
-            "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(63, 39, 135, 1)",
-              "type": "color"
-            },
-            "name": "colorContextSecondaryBarneyPurple200",
-            "attributes": {
-              "category": "color",
-              "type": "context",
-              "item": "secondary",
-              "subitem": "barneyPurple",
-              "state": "200"
-            },
-            "path": [
-              "color",
-              "context",
-              "secondary",
-              "barneyPurple",
-              "200"
-            ]
+            "type": "context",
+            "item": "secondary",
+            "subitem": "50"
           },
-          "800": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#1d1647",
+          "path": [
+            "color",
+            "context",
+            "secondary",
+            "50"
+          ]
+        },
+        "100": {
+          "description": null,
+          "type": "color",
+          "value": "#6045af",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
             "type": "color",
+            "value": "#6045afff"
+          },
+          "name": "colorContextSecondary100",
+          "attributes": {
+            "category": "color",
+            "type": "context",
+            "item": "secondary",
+            "subitem": "100"
+          },
+          "path": [
+            "color",
+            "context",
+            "secondary",
+            "100"
+          ]
+        },
+        "200": {
+          "description": null,
+          "type": "color",
+          "value": "#3f2787",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
+            "type": "color",
+            "value": "#3f2787ff"
+          },
+          "name": "colorContextSecondary200",
+          "attributes": {
+            "category": "color",
+            "type": "context",
+            "item": "secondary",
+            "subitem": "200"
+          },
+          "path": [
+            "color",
+            "context",
+            "secondary",
+            "200"
+          ]
+        },
+        "800": {
+          "description": null,
+          "type": "color",
+          "value": "#1d1647",
+          "filePath": "tokens/styleguide/color/colors.json",
+          "isSource": true,
+          "original": {
+            "description": null,
+            "type": "color",
+            "value": "#1d1647ff"
+          },
+          "name": "colorContextSecondary800",
+          "attributes": {
+            "category": "color",
+            "type": "context",
+            "item": "secondary",
+            "subitem": "800"
+          },
+          "path": [
+            "color",
+            "context",
+            "secondary",
+            "800"
+          ]
+        },
+        "onSecondary": {
+          "base": {
+            "description": null,
+            "type": "color",
+            "value": "#ffffff",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(29, 22, 71, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#ffffffff"
             },
-            "name": "colorContextSecondaryBarneyPurple800",
+            "name": "colorContextSecondaryOnSecondaryBase",
             "attributes": {
               "category": "color",
               "type": "context",
               "item": "secondary",
-              "subitem": "barneyPurple",
-              "state": "800"
+              "subitem": "onSecondary",
+              "state": "base"
             },
             "path": [
               "color",
               "context",
               "secondary",
-              "barneyPurple",
-              "800"
+              "onSecondary",
+              "base"
             ]
           }
         }
       },
       "surface": {
         "surface": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#ffffff",
+          "description": null,
           "type": "color",
+          "value": "#ffffff",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(255, 255, 255, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#ffffffff"
           },
           "name": "colorContextSurfaceSurface",
           "attributes": {
@@ -367,17 +348,15 @@ var colorsContext = {
       },
       "background": {
         "background": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f2f2f3",
+          "description": null,
           "type": "color",
+          "value": "#f2f2f3",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(242, 242, 243, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f2f2f3ff"
           },
           "name": "colorContextBackgroundBackground",
           "attributes": {
@@ -396,17 +375,15 @@ var colorsContext = {
       },
       "success": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#ebf7df",
+          "description": null,
           "type": "color",
+          "value": "#ebf7df",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(235, 247, 223, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#ebf7dfff"
           },
           "name": "colorContextSuccess20",
           "attributes": {
@@ -423,17 +400,15 @@ var colorsContext = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#90c458",
+          "description": null,
           "type": "color",
+          "value": "#90c458",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(144, 196, 88, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#90c458ff"
           },
           "name": "colorContextSuccess50",
           "attributes": {
@@ -450,17 +425,15 @@ var colorsContext = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#63992e",
+          "description": null,
           "type": "color",
+          "value": "#63992e",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(99, 153, 46, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#63992eff"
           },
           "name": "colorContextSuccess100",
           "attributes": {
@@ -477,17 +450,15 @@ var colorsContext = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#4b7322",
+          "description": null,
           "type": "color",
+          "value": "#4b7322",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(75, 115, 34, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#4b7322ff"
           },
           "name": "colorContextSuccess200",
           "attributes": {
@@ -504,17 +475,15 @@ var colorsContext = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#3a591a",
+          "description": null,
           "type": "color",
+          "value": "#3a591a",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(58, 89, 26, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#3a591aff"
           },
           "name": "colorContextSuccess800",
           "attributes": {
@@ -533,17 +502,15 @@ var colorsContext = {
       },
       "warning": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#fae2d2",
+          "description": null,
           "type": "color",
+          "value": "#fae2d2",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(250, 226, 210, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#fae2d2ff"
           },
           "name": "colorContextWarning20",
           "attributes": {
@@ -560,17 +527,15 @@ var colorsContext = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f4893f",
+          "description": null,
           "type": "color",
+          "value": "#f4893f",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(244, 137, 63, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f4893fff"
           },
           "name": "colorContextWarning50",
           "attributes": {
@@ -587,17 +552,15 @@ var colorsContext = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#ec6e16",
+          "description": null,
           "type": "color",
+          "value": "#ec6e16",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(236, 110, 22, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#ec6e16ff"
           },
           "name": "colorContextWarning100",
           "attributes": {
@@ -614,17 +577,15 @@ var colorsContext = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#c25408",
+          "description": null,
           "type": "color",
+          "value": "#c25408",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(194, 84, 8, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#c25408ff"
           },
           "name": "colorContextWarning200",
           "attributes": {
@@ -641,17 +602,15 @@ var colorsContext = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#732b1c",
+          "description": null,
           "type": "color",
+          "value": "#732b1c",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(115, 43, 28, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#732b1cff"
           },
           "name": "colorContextWarning800",
           "attributes": {
@@ -670,17 +629,15 @@ var colorsContext = {
       },
       "error": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f2ab9d",
+          "description": null,
           "type": "color",
+          "value": "#f2ab9d",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(242, 171, 157, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f2ab9dff"
           },
           "name": "colorContextError20",
           "attributes": {
@@ -697,17 +654,15 @@ var colorsContext = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#e6735c",
+          "description": null,
           "type": "color",
+          "value": "#e6735c",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(230, 115, 92, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#e6735cff"
           },
           "name": "colorContextError50",
           "attributes": {
@@ -724,17 +679,15 @@ var colorsContext = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f85130",
+          "description": null,
           "type": "color",
+          "value": "#f85130",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(248, 81, 48, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f85130ff"
           },
           "name": "colorContextError100",
           "attributes": {
@@ -751,17 +704,15 @@ var colorsContext = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#bf4830",
+          "description": null,
           "type": "color",
+          "value": "#bf4830",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(191, 72, 48, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#bf4830ff"
           },
           "name": "colorContextError200",
           "attributes": {
@@ -778,17 +729,15 @@ var colorsContext = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#993926",
+          "description": null,
           "type": "color",
+          "value": "#993926",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(153, 57, 38, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#993926ff"
           },
           "name": "colorContextError800",
           "attributes": {
@@ -807,17 +756,15 @@ var colorsContext = {
       },
       "info": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#a3ceff",
+          "description": null,
           "type": "color",
+          "value": "#a3ceff",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(163, 206, 255, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#a3ceffff"
           },
           "name": "colorContextInfo20",
           "attributes": {
@@ -834,17 +781,15 @@ var colorsContext = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#509cf2",
+          "description": null,
           "type": "color",
+          "value": "#509cf2",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(80, 156, 242, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#509cf2ff"
           },
           "name": "colorContextInfo50",
           "attributes": {
@@ -861,17 +806,15 @@ var colorsContext = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#2b7dd9",
+          "description": null,
           "type": "color",
+          "value": "#2b7dd9",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(43, 125, 217, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#2b7dd9ff"
           },
           "name": "colorContextInfo100",
           "attributes": {
@@ -888,17 +831,15 @@ var colorsContext = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#2467b3",
+          "description": null,
           "type": "color",
+          "value": "#2467b3",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(36, 103, 179, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#2467b3ff"
           },
           "name": "colorContextInfo200",
           "attributes": {
@@ -915,17 +856,15 @@ var colorsContext = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#1e5594",
+          "description": null,
           "type": "color",
+          "value": "#1e5594",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(30, 85, 148, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#1e5594ff"
           },
           "name": "colorContextInfo800",
           "attributes": {
@@ -945,17 +884,15 @@ var colorsContext = {
       "text": {
         "onSurface": {
           "emphasis": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#30313c",
+            "description": null,
             "type": "color",
+            "value": "#30313c",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(48, 49, 60, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#30313cff"
             },
             "name": "colorContextTextOnSurfaceEmphasis",
             "attributes": {
@@ -974,17 +911,15 @@ var colorsContext = {
             ]
           },
           "base": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#595a63",
+            "description": null,
             "type": "color",
+            "value": "#595a63",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(89, 90, 99, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#595a63ff"
             },
             "name": "colorContextTextOnSurfaceBase",
             "attributes": {
@@ -1003,17 +938,15 @@ var colorsContext = {
             ]
           },
           "muted": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#8b8b92",
+            "description": null,
             "type": "color",
+            "value": "#8b8b92",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(139, 139, 146, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#8b8b92ff"
             },
             "name": "colorContextTextOnSurfaceMuted",
             "attributes": {
@@ -1032,17 +965,15 @@ var colorsContext = {
             ]
           },
           "disabled": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#cdcdd0",
+            "description": null,
             "type": "color",
+            "value": "#cdcdd0",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(205, 205, 208, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#cdcdd0ff"
             },
             "name": "colorContextTextOnSurfaceDisabled",
             "attributes": {
@@ -1063,17 +994,15 @@ var colorsContext = {
         },
         "onBackground": {
           "emphasis": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#30313c",
+            "description": null,
             "type": "color",
+            "value": "#30313c",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(48, 49, 60, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#30313cff"
             },
             "name": "colorContextTextOnBackgroundEmphasis",
             "attributes": {
@@ -1092,17 +1021,15 @@ var colorsContext = {
             ]
           },
           "base": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#595a63",
+            "description": null,
             "type": "color",
+            "value": "#595a63",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(89, 90, 99, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#595a63ff"
             },
             "name": "colorContextTextOnBackgroundBase",
             "attributes": {
@@ -1121,17 +1048,15 @@ var colorsContext = {
             ]
           },
           "muted": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#8b8b92",
+            "description": null,
             "type": "color",
+            "value": "#8b8b92",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(139, 139, 146, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#8b8b92ff"
             },
             "name": "colorContextTextOnBackgroundMuted",
             "attributes": {
@@ -1150,17 +1075,15 @@ var colorsContext = {
             ]
           },
           "disabled": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#cdcdd0",
+            "description": null,
             "type": "color",
+            "value": "#cdcdd0",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(205, 205, 208, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#cdcdd0ff"
             },
             "name": "colorContextTextOnBackgroundDisabled",
             "attributes": {
@@ -1181,17 +1104,15 @@ var colorsContext = {
         },
         "onColor": {
           "base": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#ffffff",
+            "description": null,
             "type": "color",
+            "value": "#ffffff",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(255, 255, 255, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#ffffffff"
             },
             "name": "colorContextTextOnColorBase",
             "attributes": {
@@ -1212,17 +1133,15 @@ var colorsContext = {
         },
         "onLink": {
           "link": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "#6045af",
+            "description": null,
             "type": "color",
+            "value": "#6045af",
             "filePath": "tokens/styleguide/color/colors.json",
             "isSource": true,
             "original": {
-              "category": "color",
-              "exportKey": "color",
-              "value": "rgba(96, 69, 175, 1)",
-              "type": "color"
+              "description": null,
+              "type": "color",
+              "value": "#6045afff"
             },
             "name": "colorContextTextOnLinkLink",
             "attributes": {

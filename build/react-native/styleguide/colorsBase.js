@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Sep 2021 18:20:04 GMT
+ * Generated on Sun, 19 Sep 2021 23:09:55 GMT
  * Made by Pagar.me BaaS
  */
 
@@ -9,17 +9,15 @@ var colorsBase = {
     "base": {
       "trampolinBlue": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#a3ceff",
+          "description": null,
           "type": "color",
+          "value": "#a3ceff",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(163, 206, 255, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#a3ceffff"
           },
           "name": "colorBaseTrampolinBlue20",
           "attributes": {
@@ -36,17 +34,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#509cf2",
+          "description": null,
           "type": "color",
+          "value": "#509cf2",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(80, 156, 242, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#509cf2ff"
           },
           "name": "colorBaseTrampolinBlue50",
           "attributes": {
@@ -63,17 +59,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#2b7dd9",
+          "description": null,
           "type": "color",
+          "value": "#2b7dd9",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(43, 125, 217, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#2b7dd9ff"
           },
           "name": "colorBaseTrampolinBlue100",
           "attributes": {
@@ -90,17 +84,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#2467b3",
+          "description": null,
           "type": "color",
+          "value": "#2467b3",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(36, 103, 179, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#2467b3ff"
           },
           "name": "colorBaseTrampolinBlue200",
           "attributes": {
@@ -117,17 +109,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#1e5594",
+          "description": null,
           "type": "color",
+          "value": "#1e5594",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(30, 85, 148, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#1e5594ff"
           },
           "name": "colorBaseTrampolinBlue800",
           "attributes": {
@@ -146,17 +136,15 @@ var colorsBase = {
       },
       "dolphinTurquoise": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#9ce4ed",
+          "description": null,
           "type": "color",
+          "value": "#9ce4ed",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(156, 228, 237, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#9ce4edff"
           },
           "name": "colorBaseDolphinTurquoise20",
           "attributes": {
@@ -173,17 +161,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#4ecdde",
+          "description": null,
           "type": "color",
+          "value": "#4ecdde",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(78, 205, 222, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#4ecddeff"
           },
           "name": "colorBaseDolphinTurquoise50",
           "attributes": {
@@ -200,17 +186,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#1695a6",
+          "description": null,
           "type": "color",
+          "value": "#1695a6",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(22, 149, 166, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#1695a6ff"
           },
           "name": "colorBaseDolphinTurquoise100",
           "attributes": {
@@ -227,17 +211,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#0f6773",
+          "description": null,
           "type": "color",
+          "value": "#0f6773",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(15, 103, 115, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#0f6773ff"
           },
           "name": "colorBaseDolphinTurquoise200",
           "attributes": {
@@ -254,17 +236,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#0c5059",
+          "description": null,
           "type": "color",
+          "value": "#0c5059",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(12, 80, 89, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#0c5059ff"
           },
           "name": "colorBaseDolphinTurquoise800",
           "attributes": {
@@ -283,17 +263,15 @@ var colorsBase = {
       },
       "forestGreen": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#bcebd7",
+          "description": null,
           "type": "color",
+          "value": "#bcebd7",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(188, 235, 215, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#bcebd7ff"
           },
           "name": "colorBaseForestGreen20",
           "attributes": {
@@ -310,17 +288,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#4aba89",
+          "description": null,
           "type": "color",
+          "value": "#4aba89",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(74, 186, 137, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#4aba89ff"
           },
           "name": "colorBaseForestGreen50",
           "attributes": {
@@ -337,17 +313,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#1c8c5c",
+          "description": null,
           "type": "color",
+          "value": "#1c8c5c",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(28, 140, 92, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#1c8c5cff"
           },
           "name": "colorBaseForestGreen100",
           "attributes": {
@@ -364,17 +338,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#156644",
+          "description": null,
           "type": "color",
+          "value": "#156644",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(21, 102, 68, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#156644ff"
           },
           "name": "colorBaseForestGreen200",
           "attributes": {
@@ -391,17 +363,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#104d33",
+          "description": null,
           "type": "color",
+          "value": "#104d33",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(16, 77, 51, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#104d33ff"
           },
           "name": "colorBaseForestGreen800",
           "attributes": {
@@ -420,17 +390,15 @@ var colorsBase = {
       },
       "mrMeeseeksBlue": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#e2efff",
+          "description": null,
           "type": "color",
+          "value": "#e2efff",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(226, 239, 255, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#e2efffff"
           },
           "name": "colorBaseMrMeeseeksBlue20",
           "attributes": {
@@ -447,17 +415,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#5691d6",
+          "description": null,
           "type": "color",
+          "value": "#5691d6",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(86, 145, 214, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#5691d6ff"
           },
           "name": "colorBaseMrMeeseeksBlue50",
           "attributes": {
@@ -474,17 +440,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#4079bb",
+          "description": null,
           "type": "color",
+          "value": "#4079bb",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(64, 121, 187, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#4079bbff"
           },
           "name": "colorBaseMrMeeseeksBlue100",
           "attributes": {
@@ -501,17 +465,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#235894",
+          "description": null,
           "type": "color",
+          "value": "#235894",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(35, 88, 148, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#235894ff"
           },
           "name": "colorBaseMrMeeseeksBlue200",
           "attributes": {
@@ -528,17 +490,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#003c73",
+          "description": null,
           "type": "color",
+          "value": "#003c73",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(0, 60, 115, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#003c73ff"
           },
           "name": "colorBaseMrMeeseeksBlue800",
           "attributes": {
@@ -557,17 +517,15 @@ var colorsBase = {
       },
       "bethPink": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#fbe5ec",
+          "description": null,
           "type": "color",
+          "value": "#fbe5ec",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(251, 229, 236, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#fbe5ecff"
           },
           "name": "colorBaseBethPink20",
           "attributes": {
@@ -584,17 +542,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f55d8b",
+          "description": null,
           "type": "color",
+          "value": "#f55d8b",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(245, 93, 139, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f55d8bff"
           },
           "name": "colorBaseBethPink50",
           "attributes": {
@@ -611,17 +567,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#df285f",
+          "description": null,
           "type": "color",
+          "value": "#df285f",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(223, 40, 95, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#df285fff"
           },
           "name": "colorBaseBethPink100",
           "attributes": {
@@ -638,17 +592,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#a71a44",
+          "description": null,
           "type": "color",
+          "value": "#a71a44",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(167, 26, 68, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#a71a44ff"
           },
           "name": "colorBaseBethPink200",
           "attributes": {
@@ -665,17 +617,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#732640",
+          "description": null,
           "type": "color",
+          "value": "#732640",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(115, 38, 64, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#732640ff"
           },
           "name": "colorBaseBethPink800",
           "attributes": {
@@ -694,17 +644,15 @@ var colorsBase = {
       },
       "summerOrange": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#fae2d2",
+          "description": null,
           "type": "color",
+          "value": "#fae2d2",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(250, 226, 210, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#fae2d2ff"
           },
           "name": "colorBaseSummerOrange20",
           "attributes": {
@@ -721,17 +669,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f4893f",
+          "description": null,
           "type": "color",
+          "value": "#f4893f",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(244, 137, 63, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f4893fff"
           },
           "name": "colorBaseSummerOrange50",
           "attributes": {
@@ -748,17 +694,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#ec6e16",
+          "description": null,
           "type": "color",
+          "value": "#ec6e16",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(236, 110, 22, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#ec6e16ff"
           },
           "name": "colorBaseSummerOrange100",
           "attributes": {
@@ -775,17 +719,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#c25408",
+          "description": null,
           "type": "color",
+          "value": "#c25408",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(194, 84, 8, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#c25408ff"
           },
           "name": "colorBaseSummerOrange200",
           "attributes": {
@@ -802,17 +744,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#732b1c",
+          "description": null,
           "type": "color",
+          "value": "#732b1c",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(115, 43, 28, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#732b1cff"
           },
           "name": "colorBaseSummerOrange800",
           "attributes": {
@@ -831,17 +771,15 @@ var colorsBase = {
       },
       "mortyYellow": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#fff6d9",
+          "description": null,
           "type": "color",
+          "value": "#fff6d9",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(255, 246, 217, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#fff6d9ff"
           },
           "name": "colorBaseMortyYellow20",
           "attributes": {
@@ -858,17 +796,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f8cc43",
+          "description": null,
           "type": "color",
+          "value": "#f8cc43",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(248, 204, 67, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f8cc43ff"
           },
           "name": "colorBaseMortyYellow50",
           "attributes": {
@@ -885,17 +821,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f3b700",
+          "description": null,
           "type": "color",
+          "value": "#f3b700",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(243, 183, 0, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f3b700ff"
           },
           "name": "colorBaseMortyYellow100",
           "attributes": {
@@ -912,17 +846,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#d9a600",
+          "description": null,
           "type": "color",
+          "value": "#d9a600",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(217, 166, 0, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#d9a600ff"
           },
           "name": "colorBaseMortyYellow200",
           "attributes": {
@@ -939,17 +871,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#b38900",
+          "description": null,
           "type": "color",
+          "value": "#b38900",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(179, 137, 0, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#b38900ff"
           },
           "name": "colorBaseMortyYellow800",
           "attributes": {
@@ -968,17 +898,15 @@ var colorsBase = {
       },
       "firefoxRed": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f2ab9d",
+          "description": null,
           "type": "color",
+          "value": "#f2ab9d",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(242, 171, 157, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f2ab9dff"
           },
           "name": "colorBaseFirefoxRed20",
           "attributes": {
@@ -995,17 +923,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#e6735c",
+          "description": null,
           "type": "color",
+          "value": "#e6735c",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(230, 115, 92, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#e6735cff"
           },
           "name": "colorBaseFirefoxRed50",
           "attributes": {
@@ -1022,17 +948,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f85130",
+          "description": null,
           "type": "color",
+          "value": "#f85130",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(248, 81, 48, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f85130ff"
           },
           "name": "colorBaseFirefoxRed100",
           "attributes": {
@@ -1049,17 +973,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#bf4830",
+          "description": null,
           "type": "color",
+          "value": "#bf4830",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(191, 72, 48, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#bf4830ff"
           },
           "name": "colorBaseFirefoxRed200",
           "attributes": {
@@ -1076,17 +998,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#993926",
+          "description": null,
           "type": "color",
+          "value": "#993926",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(153, 57, 38, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#993926ff"
           },
           "name": "colorBaseFirefoxRed800",
           "attributes": {
@@ -1105,17 +1025,15 @@ var colorsBase = {
       },
       "caipirinhaLime": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#ebf7df",
+          "description": null,
           "type": "color",
+          "value": "#ebf7df",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(235, 247, 223, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#ebf7dfff"
           },
           "name": "colorBaseCaipirinhaLime20",
           "attributes": {
@@ -1132,17 +1050,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#90c458",
+          "description": null,
           "type": "color",
+          "value": "#90c458",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(144, 196, 88, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#90c458ff"
           },
           "name": "colorBaseCaipirinhaLime50",
           "attributes": {
@@ -1159,17 +1075,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#63992e",
+          "description": null,
           "type": "color",
+          "value": "#63992e",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(99, 153, 46, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#63992eff"
           },
           "name": "colorBaseCaipirinhaLime100",
           "attributes": {
@@ -1186,17 +1100,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#4b7322",
+          "description": null,
           "type": "color",
+          "value": "#4b7322",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(75, 115, 34, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#4b7322ff"
           },
           "name": "colorBaseCaipirinhaLime200",
           "attributes": {
@@ -1213,17 +1125,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#3a591a",
+          "description": null,
           "type": "color",
+          "value": "#3a591a",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(58, 89, 26, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#3a591aff"
           },
           "name": "colorBaseCaipirinhaLime800",
           "attributes": {
@@ -1242,17 +1152,15 @@ var colorsBase = {
       },
       "alienPurple": {
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#dfd2f7",
+          "description": null,
           "type": "color",
+          "value": "#dfd2f7",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(223, 210, 247, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#dfd2f7ff"
           },
           "name": "colorBaseAlienPurple20",
           "attributes": {
@@ -1269,17 +1177,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#916cd9",
+          "description": null,
           "type": "color",
+          "value": "#916cd9",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(145, 108, 217, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#916cd9ff"
           },
           "name": "colorBaseAlienPurple50",
           "attributes": {
@@ -1296,17 +1202,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#7155ab",
+          "description": null,
           "type": "color",
+          "value": "#7155ab",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(113, 85, 171, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#7155abff"
           },
           "name": "colorBaseAlienPurple100",
           "attributes": {
@@ -1323,17 +1227,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#553f80",
+          "description": null,
           "type": "color",
+          "value": "#553f80",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(85, 63, 128, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#553f80ff"
           },
           "name": "colorBaseAlienPurple200",
           "attributes": {
@@ -1350,17 +1252,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#443266",
+          "description": null,
           "type": "color",
+          "value": "#443266",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(68, 50, 102, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#443266ff"
           },
           "name": "colorBaseAlienPurple800",
           "attributes": {
@@ -1381,17 +1281,15 @@ var colorsBase = {
     "neutral": {
       "birdPersonGray": {
         "500": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#454550",
+          "description": null,
           "type": "color",
+          "value": "#454550",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(69, 69, 80, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#454550ff"
           },
           "name": "colorNeutralBirdPersonGray500",
           "attributes": {
@@ -1408,17 +1306,15 @@ var colorsBase = {
           ]
         },
         "600": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#30313c",
+          "description": null,
           "type": "color",
+          "value": "#30313c",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(48, 49, 60, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#30313cff"
           },
           "name": "colorNeutralBirdPersonGray600",
           "attributes": {
@@ -1435,17 +1331,15 @@ var colorsBase = {
           ]
         },
         "700": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#2a2a2a",
+          "description": null,
           "type": "color",
+          "value": "#2a2a2a",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(42, 42, 42, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#2a2a2aff"
           },
           "name": "colorNeutralBirdPersonGray700",
           "attributes": {
@@ -1462,17 +1356,15 @@ var colorsBase = {
           ]
         },
         "800": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#070817",
+          "description": null,
           "type": "color",
+          "value": "#070817",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(7, 8, 23, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#070817ff"
           },
           "name": "colorNeutralBirdPersonGray800",
           "attributes": {
@@ -1491,17 +1383,15 @@ var colorsBase = {
       },
       "squanchyGray": {
         "0": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#ffffff",
+          "description": null,
           "type": "color",
+          "value": "#ffffff",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(255, 255, 255, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#ffffffff"
           },
           "name": "colorNeutralSquanchyGray0",
           "attributes": {
@@ -1518,17 +1408,15 @@ var colorsBase = {
           ]
         },
         "20": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#f2f2f3",
+          "description": null,
           "type": "color",
+          "value": "#f2f2f3",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(242, 242, 243, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#f2f2f3ff"
           },
           "name": "colorNeutralSquanchyGray20",
           "attributes": {
@@ -1545,17 +1433,15 @@ var colorsBase = {
           ]
         },
         "50": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#cdcdd0",
+          "description": null,
           "type": "color",
+          "value": "#cdcdd0",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(205, 205, 208, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#cdcdd0ff"
           },
           "name": "colorNeutralSquanchyGray50",
           "attributes": {
@@ -1572,17 +1458,15 @@ var colorsBase = {
           ]
         },
         "100": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#a8a8ad",
+          "description": null,
           "type": "color",
+          "value": "#a8a8ad",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(168, 168, 173, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#a8a8adff"
           },
           "name": "colorNeutralSquanchyGray100",
           "attributes": {
@@ -1599,17 +1483,15 @@ var colorsBase = {
           ]
         },
         "200": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#8b8b92",
+          "description": null,
           "type": "color",
+          "value": "#8b8b92",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(139, 139, 146, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#8b8b92ff"
           },
           "name": "colorNeutralSquanchyGray200",
           "attributes": {
@@ -1626,17 +1508,15 @@ var colorsBase = {
           ]
         },
         "300": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#72737a",
+          "description": null,
           "type": "color",
+          "value": "#72737a",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(114, 115, 122, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#72737aff"
           },
           "name": "colorNeutralSquanchyGray300",
           "attributes": {
@@ -1653,17 +1533,15 @@ var colorsBase = {
           ]
         },
         "400": {
-          "category": "color",
-          "exportKey": "color",
-          "value": "#595a63",
+          "description": null,
           "type": "color",
+          "value": "#595a63",
           "filePath": "tokens/styleguide/color/colors.json",
           "isSource": true,
           "original": {
-            "category": "color",
-            "exportKey": "color",
-            "value": "rgba(89, 90, 99, 1)",
-            "type": "color"
+            "description": null,
+            "type": "color",
+            "value": "#595a63ff"
           },
           "name": "colorNeutralSquanchyGray400",
           "attributes": {
