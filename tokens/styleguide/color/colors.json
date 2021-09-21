@@ -527,22 +527,22 @@
       "text": {
         "onSurface": {
           "emphasis": {
-            "description": null,
+            "description": "Headings / Títulos / Subtitulos - Bird Person 700",
             "type": "color",
-            "value": "#30313cff"
+            "value": "#2a2a2aff"
           },
-          "base": {
-            "description": null,
+          "main": {
+            "description": "Texto",
             "type": "color",
-            "value": "#595a63ff"
+            "value": "#454550ff"
           },
           "muted": {
-            "description": null,
+            "description": "Para descrições complementares ao texto ou título.",
             "type": "color",
             "value": "#8b8b92ff"
           },
           "disabled": {
-            "description": null,
+            "description": "Para textos desabilitados.",
             "type": "color",
             "value": "#cdcdd0ff"
           }
@@ -551,12 +551,12 @@
           "emphasis": {
             "description": null,
             "type": "color",
-            "value": "#30313cff"
+            "value": "#2a2a2aff"
           },
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
-            "value": "#595a63ff"
+            "value": "#454550ff"
           },
           "muted": {
             "description": null,
@@ -570,7 +570,7 @@
           }
         },
         "onColor": {
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
             "value": "#ffffffff"
