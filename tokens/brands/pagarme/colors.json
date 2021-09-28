@@ -1,0 +1,74 @@
+{
+    "color": {
+        "brand": {
+            "primary": {
+                "20": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#ffffff"
+                },
+                "50": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#7fcc00ff"
+                },
+                "100": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#65a300ff"
+                },
+                "200": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#4f7f00ff"
+                },
+                "800": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#3a591aff"
+                },
+                "onPrimary": {
+                    "main": {
+                        "description": null,
+                        "type": "color",
+                        "value": "#ffffffff"
+                    }
+                }
+            },
+            "secondary": {
+                "20": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#dfd5ffff"
+                },
+                "50": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#8267d3ff"
+                },
+                "100": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#6045afff"
+                },
+                "200": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#3f2787ff"
+                },
+                "800": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#1d1647ff"
+                },
+                "onSecondary": {
+                    "main": {
+                        "description": null,
+                        "type": "color",
+                        "value": "#ffffffff"
+                    }
+                }
+            }
+        }
+    }
+}

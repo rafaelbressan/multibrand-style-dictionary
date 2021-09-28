@@ -1,0 +1,29 @@
+{
+    "button": {
+        "fontFamily": {
+            "value": "{font.heading.h1.value.fontFamily}"
+        },
+
+        "filled": {
+            "small": {
+                "states": {
+                    "default": {
+                        "value": "{color.brand.primary.20.value}"
+                    }
+                },
+                "default": {},
+                "large": {}
+            },
+            "outlined": {
+                "small": {},
+                "default": {},
+                "large": {}
+            },
+            "text": {
+                "small": {},
+                "default": {},
+                "large": {}
+            }
+        }
+    }
+}

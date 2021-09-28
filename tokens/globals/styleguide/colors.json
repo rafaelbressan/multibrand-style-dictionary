@@ -333,7 +333,7 @@
         }
       }
     },
-    "context": {
+    "brand": {
       "primary": {
         "20": {
           "description": null,
@@ -361,7 +361,7 @@
           "value": "#3a591aff"
         },
         "onPrimary": {
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
             "value": "#ffffffff"
@@ -395,13 +395,15 @@
           "value": "#1d1647ff"
         },
         "onSecondary": {
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
             "value": "#ffffffff"
           }
         }
-      },
+      }
+    },
+    "context": {
       "surface": {
         "surface": {
           "description": null,
@@ -527,22 +529,22 @@
       "text": {
         "onSurface": {
           "emphasis": {
-            "description": "Headings / Títulos / Subtitulos - Bird Person 700",
+            "description": "Neutral/Bird Person Gray/700 - Para enfatizar títulos, Headings ou Subheadings.",
             "type": "color",
             "value": "#2a2a2aff"
           },
           "main": {
-            "description": "Texto",
+            "description": "Neutral/Bird Person Gray/500 - Deve ser usado largamente para textos de qualquer natureza.",
             "type": "color",
             "value": "#454550ff"
           },
           "muted": {
-            "description": "Para descrições complementares ao texto ou título.",
+            "description": "Neutral/Squanchy Gray/200 - Para ser usado junto de um Heading, Subheading ou texto como descrição complementar ou assunto de importância secundária.",
             "type": "color",
             "value": "#8b8b92ff"
           },
           "disabled": {
-            "description": "Para textos desabilitados.",
+            "description": "Neutral/Squanchy Gray/50 - Para ser usado em todo tipo de texto o qual não é possível interagir, seja em descrições ou componentes.",
             "type": "color",
             "value": "#cdcdd0ff"
           }
