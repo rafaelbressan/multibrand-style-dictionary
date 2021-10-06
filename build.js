@@ -14,12 +14,17 @@ const jsTransforms = [
 //================================================//
 
 //Estruturando os caminhos para identificar os nomes dos arquivos em cada pasta
+
 const fs = require("fs");
 const brandFolders = fs.readdirSync("./tokens/brands");
 const componentFolders = fs.readdirSync("./tokens/globals/component");
 const componentList = componentFolders.map((element) => {
   return element.split(".json")[0];
 });
+const styleguideFolders = fs.readdirSync("./tokens/globals/styleguide")
+const styleguideList = styleguideFolders.map((element) => {
+  return element.split(".json")[0]
+})
 
 //================================================//
 
@@ -62,21 +67,9 @@ StyleDictionary.registerFilter({
 
 //Filtro das cores base
 StyleDictionary.registerFilter({
-  name: "isColorBase",
+  name: "isColor",
   matcher: function (token) {
-    return (
-      (token.attributes.category === "color" &&
-        token.attributes.type === "base") ||
-      token.attributes.type === "neutral"
-    );
-  },
-});
-
-//Filtro de cores de contexto
-StyleDictionary.registerFilter({
-  name: "isColorContext",
-  matcher: function (token) {
-    return token.attributes.type === "context" || token.attributes.type === "brand";
+    return token.attributes.category === "color";
   },
 });
 
@@ -146,24 +139,14 @@ function getStyleDictionaryStyleguideConfig(brand) {
         buildPath: `build/js/brands/${brand}/styleguide/`,
         files: [
           {
-            name: "colorsBase",
-            destination: "colorsBase.js",
+            name: "colors",
+            destination: "colors.js",
             format: "javascript/object",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
             },
-            filter: "isColorBase",
-          },
-          {
-            name: "colorsContext",
-            destination: "colorsContext.js",
-            format: "javascript/object",
-            options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
-            },
-            filter: "isColorContext",
+            filter: "isColor",
           },
           {
             name: "fonts",

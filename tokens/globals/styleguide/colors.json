@@ -472,6 +472,33 @@
           "value": "#732b1cff"
         }
       },
+      "disabled": {
+        "20": {
+          "description": null,
+          "type": "color",
+          "value": "#f2f2f3ff"
+        },
+        "50": {
+          "description": null,
+          "type": "color",
+          "value": "#cdcdd0ff"
+        },
+        "100": {
+          "description": null,
+          "type": "color",
+          "value": "#a8a8adff"
+        },
+        "200": {
+          "description": null,
+          "type": "color",
+          "value": "#8b8b92ff"
+        },
+        "300": {
+          "description": null,
+          "type": "color",
+          "value": "#72737aff"
+        }
+      },
       "error": {
         "20": {
           "description": null,
@@ -583,6 +610,13 @@
             "description": null,
             "type": "color",
             "value": "#6045afff"
+          }
+        },
+        "onDisabled": {
+          "main": {
+            "description": null,
+            "type": "color",
+            "value": "#a8a8adff"
           }
         }
       }
