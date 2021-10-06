@@ -12,6 +12,9 @@
             }
         },
         "radius": {
+            "default": {
+                "value": "{button.radius.chamfered.value}"
+            },
             "chamfered": {
                 "value": "{radii.large.value}"
             },
