@@ -1,0 +1,84 @@
+{
+    "color": {
+        "brand": {
+            "primary": {
+                "base": {
+                    "description": null,
+                    "type": "{color.brand.primary.100.type}",
+                    "value": "{color.brand.primary.100.value}"
+                },
+                "20": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#A3CEFF"
+                },
+                "50": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#509CF2"
+                },
+                "100": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#2B7DD9"
+                },
+                "200": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#2467B3"
+                },
+                "800": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#1E5594"
+                },
+                "onPrimary": {
+                    "main": {
+                        "description": null,
+                        "type": "color",
+                        "value": "#ffffffff"
+                    }
+                }
+            },
+            "secondary": {
+                "base": {
+                    "description": null,
+                    "type": "{color.brand.secondary.100.type}",
+                    "value": "{color.brand.secondary.100.value}"
+                },
+                "20": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#9CE4ED"
+                },
+                "50": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#4ECDDE"
+                },
+                "100": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#1695A6"
+                },
+                "200": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#0F6773"
+                },
+                "800": {
+                    "description": null,
+                    "type": "color",
+                    "value": "#0C5059"
+                },
+                "onSecondary": {
+                    "main": {
+                        "description": null,
+                        "type": "color",
+                        "value": "#ffffffff"
+                    }
+                }
+            }
+        }
+    }
+}

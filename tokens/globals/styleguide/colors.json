@@ -333,7 +333,7 @@
         }
       }
     },
-    "context": {
+    "brand": {
       "primary": {
         "20": {
           "description": null,
@@ -361,7 +361,7 @@
           "value": "#3a591aff"
         },
         "onPrimary": {
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
             "value": "#ffffffff"
@@ -395,13 +395,15 @@
           "value": "#1d1647ff"
         },
         "onSecondary": {
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
             "value": "#ffffffff"
           }
         }
-      },
+      }
+    },
+    "context": {
       "surface": {
         "surface": {
           "description": null,
@@ -470,6 +472,33 @@
           "value": "#732b1cff"
         }
       },
+      "disabled": {
+        "20": {
+          "description": null,
+          "type": "color",
+          "value": "#f2f2f3ff"
+        },
+        "50": {
+          "description": null,
+          "type": "color",
+          "value": "#cdcdd0ff"
+        },
+        "100": {
+          "description": null,
+          "type": "color",
+          "value": "#a8a8adff"
+        },
+        "200": {
+          "description": null,
+          "type": "color",
+          "value": "#8b8b92ff"
+        },
+        "300": {
+          "description": null,
+          "type": "color",
+          "value": "#72737aff"
+        }
+      },
       "error": {
         "20": {
           "description": null,
@@ -527,22 +556,22 @@
       "text": {
         "onSurface": {
           "emphasis": {
-            "description": null,
+            "description": "Neutral/Bird Person Gray/700 - Para enfatizar títulos, Headings ou Subheadings.",
             "type": "color",
-            "value": "#30313cff"
+            "value": "#2a2a2aff"
           },
-          "base": {
-            "description": null,
+          "main": {
+            "description": "Neutral/Bird Person Gray/500 - Deve ser usado largamente para textos de qualquer natureza.",
             "type": "color",
-            "value": "#595a63ff"
+            "value": "#454550ff"
           },
           "muted": {
-            "description": null,
+            "description": "Neutral/Squanchy Gray/200 - Para ser usado junto de um Heading, Subheading ou texto como descrição complementar ou assunto de importância secundária.",
             "type": "color",
             "value": "#8b8b92ff"
           },
           "disabled": {
-            "description": null,
+            "description": "Neutral/Squanchy Gray/50 - Para ser usado em todo tipo de texto o qual não é possível interagir, seja em descrições ou componentes.",
             "type": "color",
             "value": "#cdcdd0ff"
           }
@@ -551,12 +580,12 @@
           "emphasis": {
             "description": null,
             "type": "color",
-            "value": "#30313cff"
+            "value": "#2a2a2aff"
           },
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
-            "value": "#595a63ff"
+            "value": "#454550ff"
           },
           "muted": {
             "description": null,
@@ -570,7 +599,7 @@
           }
         },
         "onColor": {
-          "base": {
+          "main": {
             "description": null,
             "type": "color",
             "value": "#ffffffff"
@@ -581,6 +610,13 @@
             "description": null,
             "type": "color",
             "value": "#6045afff"
+          }
+        },
+        "onDisabled": {
+          "main": {
+            "description": null,
+            "type": "color",
+            "value": "#a8a8adff"
           }
         }
       }
