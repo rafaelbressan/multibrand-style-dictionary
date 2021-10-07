@@ -85,7 +85,7 @@
                     "states": {
                         "default": {
                             "value": {
-                                "textColor": "{color.brand.primary.onPrimary.main.value}",
+                                "textColor": "{color.brand.primary.100.value}",
                                 "borderColor": "{color.brand.primary.100.value}",
                                 "borderStroke": "{sizes.tiniest.value}"
                             }
@@ -99,7 +99,7 @@
                         "disabled": {
                             "value": {
                                 "textColor": "{color.context.text.onDisabled.main.value}",
-                                "borderColor": "{color.brand.primary.100.value}",
+                                "borderColor": "{color.context.disabled.100.value}",
                                 "borderStroke": "{sizes.tiniest.value}"
                             }
                         }
@@ -109,7 +109,7 @@
                     "states": {
                         "default": {
                             "value": {
-                                "textColor": "{color.brand.primary.onPrimary.main.value}"
+                                "textColor": "{color.brand.primary.main.value}"
                             }
                         },
                         "hovered": {
