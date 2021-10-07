@@ -109,7 +109,7 @@
                     "states": {
                         "default": {
                             "value": {
-                                "textColor": "{color.brand.primary.main.value}"
+                                "textColor": "{color.brand.primary.100.value}"
                             }
                         },
                         "hovered": {
