@@ -36,9 +36,9 @@
             },
             "default": {
                 "value": {
-                    "paddingTop": "{spacing.smaller.top.value}",
+                    "paddingTop": "{spacing.small.top.value}",
                     "paddingRight": "{spacing.medium.right.value}",
-                    "paddingBottom": "{spacing.smaller.bottom.value}",
+                    "paddingBottom": "{spacing.small.bottom.value}",
                     "paddingLeft": "{spacing.medium.left.value}"
                 }
             },
