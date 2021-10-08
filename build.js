@@ -98,6 +98,10 @@ StyleDictionary.registerFilter({
   },
 });
 
+//================================================//
+
+//Registrando formato customizável para react native
+
 StyleDictionary.registerFormat({
   name: 'javascript/reactnative',
   formatter: function({dictionary, file}) {
