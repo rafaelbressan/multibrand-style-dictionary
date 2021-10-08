@@ -1,5 +1,6 @@
 //Importantdo o Style Dictionary
 const StyleDictionary = require("style-dictionary");
+const { fileHeader } = StyleDictionary.formatHelpers;
 
 //================================================//
 
@@ -97,6 +98,18 @@ StyleDictionary.registerFilter({
   },
 });
 
+StyleDictionary.registerFormat({
+  name: 'javascript/reactnative',
+  formatter: function({dictionary, file}) {
+    return fileHeader({file}) +
+    'export default ' +
+    (file.name || '_styleDictionary') +
+    ' = ' +
+    JSON.stringify(dictionary.tokens, null, 2) +
+    ';';
+  }
+})
+
 //================================================//
 
 //Components
@@ -141,7 +154,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
           {
             name: "colors",
             destination: "colors.js",
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
@@ -151,7 +164,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
           {
             name: "fonts",
             destination: "fonts.js",
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
@@ -161,7 +174,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
           {
             name: "opacities",
             destination: "opacities.js",
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
@@ -171,7 +184,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
           {
             name: "radius",
             destination: "radius.js",
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
@@ -181,7 +194,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
           {
             name: "shadows",
             destination: "shadows.js",
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
@@ -191,7 +204,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
           {
             name: "sizes",
             destination: "sizes.js",
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
@@ -201,7 +214,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
           {
             name: "spacings",
             destination: "spacings.js",
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
@@ -229,7 +242,7 @@ function getStyleDictionaryComponentConfig(brand, component) {
           {
             name: component,
             destination: `${component}.js`,
-            format: "javascript/object",
+            format: "javascript/reactnative",
             options: {
               outputReferences: true,
               fileHeader: "tokenHeader",
