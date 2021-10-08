@@ -1,5 +1,6 @@
 # StoneCo Style Dictionary
 
+
 Esse projeto visa estruturar uma série de styleguides para todas as marcas da companhia StoneCo, incluindo Pagar.me, TON, Conta Stone e outros clientes de serviços de Banking as a Service. É só entrar no projeto e rodar:
 
 ```bash
@@ -51,8 +52,7 @@ End pagarme processing
 
 Build completed!
 ```
-
-Good for you! You have now built your first style dictionary! Moving on, take a look at what we have built. This should have created a build directory and it should look like this:
+Os arquivos gerados pelo Style Dictionary da plataforma `js` podem ser vistos nos seus diretórios correspondentes. Se observar os diretórios criados dentro de `build`, deve ter uma estrutura semelhante à exemplificada abaixo:
 ```
 design-tokens/
 ├─ node_modules/
@@ -110,11 +110,11 @@ design-tokens/
 
 ```
 
-Se você abrir o `build.js` vocÊ verá a plataforma JS e dentro dela uma série de exportações de arquivos para melhor organização. Cada arquivo contém seu filtro específico, registrado como `StyleDictionary.registerFilter` e os buildPaths para exportação em suas respectivas pastas finais. Os arquivos finais devem ser semelhantes a isso:
+Se você abrir o `build.js` vocÊ verá a plataforma JS e dentro dela uma série de exportações de arquivos para melhor organização. Cada arquivo contém seu filtro específico, registrado como `StyleDictionary.registerFilter` e os buildPaths para exportação em suas respectivas pastas finais. Os arquivos finais, como por exemplo o arquivo de `opacities.js`, devem ser semelhantes a isso:
 
-**Android**
+**JavaScript**
 ```js
-var opacities = {
+export default opacities = {
   "opacity": {
     "opaquest": {
       "type": "opacity",
@@ -139,11 +139,12 @@ var opacities = {
 }
 ```
 
-O que aconteceu?
+## O que aconteceu?
 
+1. O sistema realiza um merge de todos os arquivos JSON definidos no atributo `source` especificado em `build.js`. Assim é possível dividir e organizar os arquivos JSON que você quiser da maneira que quiser, o build sempre vai realizar um merge geral no final.
+2. O sistema resolve todas as referências, como por exemplo `{font.button.small.value}` em `button.json`. Ele já está especificado que, em alguns casos, como por exemplo na exportação de CSS ou SCSS, é possível ver a referência, com o atributo `outputReferences: true`.
+3. O sistema exporta para o formato desejado, no caso, o formato específico para React Native criado internamente `javascript/reactnative`. No entanto, pode-se gerar tokens para quaisquer tipos de plataformas, como CSS, SCSS e em outros formatos customizados também.
 
+---
 
-Pretty nifty! This shows a few things happening:
-1. The build system does a deep merge of all the token JSON files defined in the `source` attribute of `config.js`. This allows you to split up the token JSON files however you want. There are 2 JSON files with `color` as the top level key, but they get merged properly.
-1. The build system resolves references to other design tokens. `{size.font.medium.value}` gets resolved properly.
-1. The build system handles references to token values in other files as well as you can see in `tokens/color/font.json`.
+Você pode consultar mais da documentação em [Amazon Style Dictionary](https://amzn.github.io/style-dictionary/#/README) e conferir a aplicação dos tokens no [Design System da Pagar.me](https://zeroheight.com/7aba22741).
