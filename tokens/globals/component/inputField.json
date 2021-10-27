@@ -1,0 +1,213 @@
+{
+    "inputField": {
+        "style": {
+            "filled": {
+                "states": {
+                    "default": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.20.value}",
+                            "borderColor": "{color.neutral.squanchyGray.300.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "hovered": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.20.value}",
+                            "borderColor": "{color.neutral.squanchyGray.200.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "pressed": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                            "borderColor": "{color.neutral.squanchyGray.300.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "active": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                            "borderColor": "{color.brand.primary.100.value}",
+                            "inputFieldText": "{inputField.fonts.inputField.inputText.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "success": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                            "borderColor": "{color.context.success.100.value}",
+                            "inputFieldText": "{inputField.fonts.inputField.inputText.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "error": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                            "borderColor": "{color.context.error.100.value}",
+                            "inputFieldText": "{inputField.fonts.inputField.inputText.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "disabled": {
+                        "value": {
+                            "backgroundColor": "{color.context.disabled.20.value}",
+                            "borderColor": "{color.context.disabled.50.value}",
+                            "inputFieldText": "{inputField.fonts.inputField.disabledText.value}",
+                            "placeholderText": "{inputField.fonts.inputField.disabledText.value}"
+                        }
+                    }
+                }
+            },
+            "outlined": {
+                "states": {
+                    "default": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.20.value}",
+                            "dividerColor": "{color.neutral.squanchyGray.300.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "hovered": {"value": {
+                        "backgroundColor": "{color.neutral.squanchyGray.20.value}",
+                        "dividerColor": "{color.neutral.squanchyGray.200.value}",
+                        "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                    }},
+                    "pressed": {"value": {
+                        "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                        "dividerColor": "{color.neutral.squanchyGray.300.value}",
+                        "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                    }},
+                    "active": { "value": {
+                        "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                        "dividerColor": "{color.brand.primary.100.value}",
+                        "inputFieldText": "{inputField.fonts.inputField.inputText.value}",
+                        "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                    }},
+                    "success": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                            "dividerColor": "{color.context.success.100.value}",
+                            "inputFieldText": "{inputField.fonts.inputField.inputText.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "error": {
+                        "value": {
+                            "backgroundColor": "{color.neutral.squanchyGray.0.value}",
+                            "dividerColor": "{color.context.error.100.value}",
+                            "inputFieldText": "{inputField.fonts.inputField.inputText.value}",
+                            "placeholderText": "{inputField.fonts.inputField.placeholderText.value}"
+                        }
+                    },
+                    "disabled": {
+                        "value": {
+                            "backgroundColor": "{color.context.disabled.20.value}",
+                            "dividerColor": "{color.context.disabled.50.value}",
+                            "inputFieldText": "{inputField.fonts.inputField.disabledText.value}",
+                            "placeholderText": "{inputField.fonts.inputField.disabledText.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "borders": {
+            "filled": {
+                "value": {
+                    "borderSize": "{borders.medium.value.weight}"
+                }
+            },
+            "outlined": {
+                "value": {
+                    "borderSize": "{borders.regular.value.weight}"
+                }
+            }
+        },
+        "sizes": {
+            "inputFieldIcon": {
+                "value": "{sizes.larger.value}"
+            },
+            "statusTextIcon": {
+                "value": "{sizes.regular.value}"
+            }
+        },
+        "radius": {
+            "filled": {
+                "value": {
+                    "topLeft": "{radii.regular.value.topLeft}",
+                    "topRight": "{radii.regular.value.topRight}"
+                }
+            },
+            "outlined": {
+                "value": "{radii.regular.value}"
+            }
+        },
+        "fonts": {
+            "inputField": {
+                "placeholderText": {
+                    "value": {
+                        "fontFamily": "{inputField.fonts.inputField.inputText.value.fontFamily}",
+                        "fontColor": "{color.context.text.onSurface.muted.value}"
+                    }
+                },
+                "inputText": {
+                    "value": {
+                        "fontFamily": "{font.base.default.regular.value}",
+                        "fontColor": "{color.context.text.onSurface.main.value}"
+                    }
+                },
+                "disabledText": {
+                    "value": {
+                        "fontFamily": "{inputField.fonts.inputField.inputText.value.fontFamily}",
+                        "fontColor": "{color.context.text.onSurface.disabled.value}"
+                    }
+                },
+                "suffix": {
+                    "value": {
+                        "fontFamily": "{inputField.fonts.inputField.inputText.value.fontFamily}",
+                        "fontColor": "{color.context.text.onSurface.muted.value}"
+                    }
+                },
+                "prefix": {
+                    "value": {
+                        "fontFamily": "{inputField.fonts.inputField.inputText.value.fontFamily}",
+                        "fontColor": "{color.context.text.onSurface.muted.value}"
+                    }
+                }
+            },
+            "label": {
+                "labelField": {
+                    "value": {
+                        "fontFamily": "{font.base.small.regular.value}",
+                        "fontColor": "{color.context.text.onSurface.muted.value}"
+                    }
+                },
+                "required": {
+                    "value": {
+                        "fontFamily": "{inputField.fonts.label.labelField.value.fontFamily}",
+                        "fontColor": "{color.context.error.100.value}"
+                    }
+                }
+            },
+            "assistiveText": {
+                "value": {
+                    "fontFamily": "{font.base.small.regular.value}",
+                    "fontColor": "{color.context.text.onSurface.muted.value}"
+                }
+            },
+            "statusText": {
+                "errorText": {
+                    "value": {
+                        "fontFamily": "{font.base.small.regular.value}",
+                        "fontColor": "{color.context.error.100.value}"
+                    }
+                },
+                "successText": {
+                    "value": {
+                        "fontFamily": "{font.base.small.regular.value}",
+                        "fontColor": "{color.context.success.100.value}"
+                    }
+                }
+            }
+        }
+    }
+}

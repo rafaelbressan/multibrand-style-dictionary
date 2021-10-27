@@ -4,13 +4,16 @@ const { fileHeader } = StyleDictionary.formatHelpers;
 
 //================================================//
 
-//Concentrando as transformações dos tokens em uma só variável
+//Concentrando açgumas settings e transformações dos tokens em uma só variável
 const jsTransforms = [
   "attribute/cti",
   "name/cti/camel",
   "size/object",
   "color/css",
 ];
+
+const outputReferences = true;
+const tokenHeader = "tokenHeader";
 
 //================================================//
 
@@ -22,10 +25,11 @@ const componentFolders = fs.readdirSync("./tokens/globals/component");
 const componentList = componentFolders.map((element) => {
   return element.split(".json")[0];
 });
-const styleguideFolders = fs.readdirSync("./tokens/globals/styleguide")
+
+const styleguideFolders = fs.readdirSync("./tokens/globals/styleguide");
 const styleguideList = styleguideFolders.map((element) => {
-  return element.split(".json")[0]
-})
+  return element.split(".json")[0];
+});
 
 //================================================//
 
@@ -38,7 +42,6 @@ StyleDictionary.registerFileHeader({
 });
 
 //================================================//
-
 
 //Criando filtros para cada transformação poder gerar seu arquivo específico (cor, fonte, tamanhos,etc.)
 
@@ -90,11 +93,33 @@ StyleDictionary.registerFilter({
   },
 });
 
-//Filtro de dimensões / tamanhos
+//Filtro de tamanhos
 StyleDictionary.registerFilter({
   name: "isSize",
   matcher: function (token) {
-    return token.type === "dimension";
+    return (
+      token.type === "dimension" &&
+      token.filePath === "tokens/globals/styleguide/sizes.json"
+    );
+  },
+});
+
+//Filtro de breakpoionts
+StyleDictionary.registerFilter({
+  name: "isBreakpoints",
+  matcher: function (token) {
+    return (
+      token.type === "dimension" &&
+      token.filePath === "tokens/globals/styleguide/breakpoints.json"
+    );
+  },
+});
+
+//Filtro de bordas
+StyleDictionary.registerFilter({
+  name: "isBorder",
+  matcher: function (token) {
+    return token.type === "custom-stroke";
   },
 });
 
@@ -103,16 +128,18 @@ StyleDictionary.registerFilter({
 //Registrando formato customizável para react native
 
 StyleDictionary.registerFormat({
-  name: 'javascript/reactnative',
-  formatter: function({dictionary, file}) {
-    return fileHeader({file}) +
-    'export default ' +
-    (file.name || '_styleDictionary') +
-    ' = ' +
-    JSON.stringify(dictionary.tokens, null, 2) +
-    ';';
-  }
-})
+  name: "javascript/reactnative",
+  formatter: function ({ dictionary, file }) {
+    return (
+      fileHeader({ file }) +
+      "export default " +
+      (file.name || "_styleDictionary") +
+      " = " +
+      JSON.stringify(dictionary.tokens, null, 2) +
+      ";"
+    );
+  },
+});
 
 //================================================//
 
@@ -141,14 +168,14 @@ componentList.forEach(function (component) {
 
 //================================================//
 
-//Criação da função para gerar os styleguides 
+//Criação da função para gerar os styleguides
 function getStyleDictionaryStyleguideConfig(brand) {
   return {
-    // O arquivo Source sobrescreve os valores dos arquivos globais. 
+    // O arquivo Source sobrescreve os valores dos arquivos globais.
     // Logo, toda vez que precisar adicionar algum arquivo .json com alguma configuração personalizada de
-    // tamanho, cor, fonte, etc. na pasta da marca, é só adicionar dentro da pasta do cliente específico, 
+    // tamanho, cor, fonte, etc. na pasta da marca, é só adicionar dentro da pasta do cliente específico,
     // que os valores do "tokens/globals" serão sobrescritos pelos da marca.
-    source:[`tokens/brands/${brand}/*.json`],
+    source: [`tokens/brands/${brand}/*.json`],
     include: [`tokens/globals/styleguide/*.json`],
     platforms: {
       js: {
@@ -160,8 +187,8 @@ function getStyleDictionaryStyleguideConfig(brand) {
             destination: "colors.js",
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: "isColor",
           },
@@ -170,8 +197,8 @@ function getStyleDictionaryStyleguideConfig(brand) {
             destination: "fonts.js",
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: "isFont",
           },
@@ -180,8 +207,8 @@ function getStyleDictionaryStyleguideConfig(brand) {
             destination: "opacities.js",
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: "isOpacity",
           },
@@ -190,8 +217,8 @@ function getStyleDictionaryStyleguideConfig(brand) {
             destination: "radius.js",
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: "isRadius",
           },
@@ -200,8 +227,8 @@ function getStyleDictionaryStyleguideConfig(brand) {
             destination: "shadows.js",
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: "isShadow",
           },
@@ -210,8 +237,8 @@ function getStyleDictionaryStyleguideConfig(brand) {
             destination: "sizes.js",
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: "isSize",
           },
@@ -220,10 +247,30 @@ function getStyleDictionaryStyleguideConfig(brand) {
             destination: "spacings.js",
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: "isSpacing",
+          },
+          {
+            name: "borders",
+            destination: "borders.js",
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: "isBorder",
+          },
+          {
+            name: "breakpoints",
+            destination: "breakpoints.js",
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: "isBreakpoints",
           },
         ],
       },
@@ -236,7 +283,10 @@ function getStyleDictionaryStyleguideConfig(brand) {
 //Criação da função que gera os componentes
 function getStyleDictionaryComponentConfig(brand, component) {
   return {
-    source: [`tokens/brands/${brand}/*.json`, `tokens/globals/component/*.json`],
+    source: [
+      `tokens/brands/${brand}/*.json`,
+      `tokens/globals/component/*.json`,
+    ],
     include: [`tokens/globals/styleguide/*.json`],
     platforms: {
       js: {
@@ -248,8 +298,8 @@ function getStyleDictionaryComponentConfig(brand, component) {
             destination: `${component}.js`,
             format: "javascript/reactnative",
             options: {
-              outputReferences: true,
-              fileHeader: "tokenHeader",
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
             },
             filter: `is${capitalizeFirstLetter(component)}`,
           },
@@ -274,6 +324,8 @@ brandFolders.map(function (brand) {
     getStyleDictionaryStyleguideConfig(brand)
   ).buildAllPlatforms();
 
+  console.log("\n==============================================");
+  console.log(`\nProcessing ${brand} components`);
   //Mapeamento dos arquivos dos componentes para gerar os tokens de cada aplicação
   componentList.map(function (component) {
     StyleDictionary.extend(

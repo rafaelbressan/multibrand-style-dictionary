@@ -1,0 +1,104 @@
+{
+    "borders": {
+      "none": {
+        "description": null,
+        "type": "custom-stroke",
+        "value": {
+          "align": "inside",
+          "dashPattern": [],
+          "lineCap": "none",
+          "lineJoin": "miter",
+          "miterLimit": 4,
+          "weight": 0,
+          "color": "#65a300ff"
+        }
+      },
+      "regular": {
+        "description": null,
+        "type": "custom-stroke",
+        "value": {
+          "align": "inside",
+          "dashPattern": [],
+          "lineCap": "none",
+          "lineJoin": "miter",
+          "miterLimit": 4,
+          "weight": 1,
+          "color": "#65a300ff"
+        }
+      },
+      "medium": {
+        "description": null,
+        "type": "custom-stroke",
+        "value": {
+          "align": "inside",
+          "dashPattern": [],
+          "lineCap": "none",
+          "lineJoin": "miter",
+          "miterLimit": 4,
+          "weight": 2,
+          "color": "#65a300ff"
+        }
+      },
+      "large": {
+        "description": null,
+        "type": "custom-stroke",
+        "value": {
+          "align": "inside",
+          "dashPattern": [],
+          "lineCap": "none",
+          "lineJoin": "miter",
+          "miterLimit": 4,
+          "weight": 4,
+          "color": "#65a300ff"
+        }
+      },
+      "dashedRegular": {
+        "description": null,
+        "type": "custom-stroke",
+        "value": {
+          "align": "inside",
+          "dashPattern": [
+            12,
+            20
+          ],
+          "lineCap": "square",
+          "lineJoin": "round",
+          "miterLimit": 4,
+          "weight": 1,
+          "color": "#65a300ff"
+        }
+      },
+      "dashedMedium": {
+        "description": null,
+        "type": "custom-stroke",
+        "value": {
+          "align": "inside",
+          "dashPattern": [
+            12,
+            20
+          ],
+          "lineCap": "square",
+          "lineJoin": "round",
+          "miterLimit": 4,
+          "weight": 2,
+          "color": "#65a300ff"
+        }
+      },
+      "dashedLarge": {
+        "description": null,
+        "type": "custom-stroke",
+        "value": {
+          "align": "inside",
+          "dashPattern": [
+            12,
+            20
+          ],
+          "lineCap": "square",
+          "lineJoin": "round",
+          "miterLimit": 4,
+          "weight": 4,
+          "color": "#65a300ff"
+        }
+      }
+    }
+  }
