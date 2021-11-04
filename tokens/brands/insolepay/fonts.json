@@ -1,0 +1,194 @@
+{
+    "font": {
+        "heading": {
+            "h1": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-Regular"
+                }
+            },
+            "h2": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-Regular"
+                }
+            },
+            "h3": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-Regular"
+                }
+            },
+            "h4": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-Regular"
+                }
+            },
+            "hn": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-SemiBold"
+                }
+            }
+        },
+        "subheading": {
+            "regular": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-Regular"
+                }
+            },
+            "bold": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-SemiBold"
+                }
+            }
+        },
+        "base": {
+            "default": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-SemiBold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "uppercase": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-SemiBold"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                }
+            },
+            "small": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-SemiBold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "uppercase": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-SemiBold"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                }
+            },
+            "tiny": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-SemiBold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                }
+            },
+            "crumb": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-SemiBold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                },
+                "uppercase": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-SemiBold"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Montserrat-Regular"
+                    }
+                }
+            }
+        },
+        "button": {
+            "default": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-SemiBold"
+                }
+            },
+            "small": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-SemiBold"
+                }
+            },
+            "large": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Montserrat-SemiBold"
+                }
+            }
+        }
+    }
+}
