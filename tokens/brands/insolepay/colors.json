@@ -3,22 +3,22 @@
         "brand": {
             "primary": {
                 "20": {
-                    "value": "#A3CEFF"
+                    "value": "#CDE8EA"
                 },
                 "50": {
-                    "value": "#509CF2"
+                    "value": "#87D0D6"
                 },
                 "100": {
-                    "value": "#2B7DD9"
+                    "value": "#40A9B0"
                 },
                 "200": {
-                    "value": "#2467B3"
+                    "value": "#058C95"
                 },
                 "800": {
-                    "value": "#1E5594"
+                    "value": "#03595F"
                 },
                 "base": {
-                    "value": "{color.brand.primary.100.value}"
+                    "value": "{color.brand.primary.200.value}"
                 },
                 "onPrimary": {
                     "main": {
@@ -28,22 +28,22 @@
             },
             "secondary": {
                 "20": {
-                    "value": "#9CE4ED"
+                    "value": "#C1C4C8"
                 },
                 "50": {
-                    "value": "#4ECDDE"
+                    "value": "#9A9FA7"
                 },
                 "100": {
-                    "value": "#1695A6"
+                    "value": "#78808A"
                 },
                 "200": {
-                    "value": "#0F6773"
+                    "value": "#5A6471"
                 },
                 "800": {
-                    "value": "#0C5059"
+                    "value": "#333F48"
                 },
                 "base": {
-                    "value": "{color.brand.secondary.100.value}"
+                    "value": "{color.brand.secondary.800.value}"
                 },
                 "onSecondary": {
                     "main": {
