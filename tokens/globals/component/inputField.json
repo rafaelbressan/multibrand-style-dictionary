@@ -169,13 +169,20 @@
                 "value": "{spacing.smallest.right.value}"
             },
             "labelMargin": {
-                "value": "{spacing.smallest.bottom.value}"
+                "value": {
+                    "marginBottom": "{spacing.smallest.bottom.value}"
+                }
             },
             "statusMargin": {
-                "value": "{spacing.smallest.bottom.value}"
+                "value":{
+                    "margintop": "{spacing.smallest.top.value}"
+                }
+                
             },
             "assistiveMargin": {
-                "value": "{spacing.smallest.bottom.value}"
+                "value": {
+                    "margintop": "{spacing.smallest.top.value}"
+                }
             }
         },
         "radius": {
