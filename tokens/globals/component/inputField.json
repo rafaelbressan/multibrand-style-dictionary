@@ -1,6 +1,29 @@
 {
     "inputField": {
         "style": {
+            "default": {
+                "default": {
+                    "value": "{inputField.style.filled.default.value}"
+                },
+                "hovered": {
+                    "value": "{inputField.style.filled.hovered.value}"
+                },
+                "pressed": {
+                    "value": "{inputField.style.filled.pressed.value}"
+                },
+                "active": {
+                    "value": "{inputField.style.filled.active.value}"
+                },
+                "success": {
+                    "value": "{inputField.style.filled.success.value}"
+                },
+                "error": {
+                    "value": "{inputField.style.filled.error.value}"
+                },
+                "disabled": {
+                    "value": "{inputField.style.filled.disabled.value}"
+                }
+            },
             "filled": {
                 "default": {
                     "value": {
@@ -115,12 +138,15 @@
         "borders": {
             "filled": {
                 "value": {
-                    "borderSize": "{borders.medium.value.weight}"
+                    "borderBottom": "{borders.medium.value.weight}"
                 }
             },
             "outlined": {
                 "value": {
-                    "borderSize": "{borders.regular.value.weight}"
+                    "borderBottom": "{borders.regular.value.weight}",
+                    "borderLeft": "{borders.regular.value.weight}",
+                    "borderRight": "{borders.regular.value.weight}",
+                    "borderTop": "{borders.regular.value.weight}"
                 }
             }
         },
@@ -134,13 +160,22 @@
             "formPadding": {
                 "value": {
                     "paddingTop": "{spacing.small.top.value}",
-                    "paddingRight": "{spacing.smallest.right.value}",
+                    "paddingRight": "{spacing.smaller.right.value}",
                     "paddingBottom": "{spacing.small.bottom.value}",
-                    "paddingLeft": "{spacing.smallest.left.value}"
+                    "paddingLeft": "{spacing.smaller.left.value}"
                 }
             },
             "formIconGap": {
                 "value": "{spacing.smallest.right.value}"
+            },
+            "labelMargin": {
+                "value": "{spacing.smallest.bottom.value}"
+            },
+            "statusMargin": {
+                "value": "{spacing.smallest.bottom.value}"
+            },
+            "assistiveMargin": {
+                "value": "{spacing.smallest.bottom.value}"
             }
         },
         "radius": {
