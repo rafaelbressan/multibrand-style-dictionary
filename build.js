@@ -1,5 +1,5 @@
 //Importantdo o Style Dictionary
-
+const styleguide = require("./styleguide")
 const StyleDictionary = require("style-dictionary");
 const { fileHeader } = StyleDictionary.formatHelpers;
 
@@ -7,7 +7,7 @@ const { fileHeader } = StyleDictionary.formatHelpers;
 
 //Concentrando açgumas settings e transformações dos tokens em uma só variável
 
-const jsTransforms = [
+const rnTransforms = [
   "attribute/cti",
   "name/cti/camel",
   "size/object",
@@ -189,7 +189,7 @@ function getStyleDictionaryStyleguideConfig(brand) {
     include: [`tokens/globals/styleguide/*.json`],
     platforms: {
       js: {
-        transforms: jsTransforms,
+        transforms: rnTransforms,
         buildPath: `build/js/brands/${brand}/styleguide/`,
         files: [
           {
@@ -301,7 +301,7 @@ function getStyleDictionaryComponentConfig(brand, component) {
     include: [`tokens/globals/styleguide/*.json`],
     platforms: {
       js: {
-        transforms: jsTransforms,
+        transforms: rnTransforms,
         buildPath: `build/js/brands/${brand}/component/`,
         files: [
           {
