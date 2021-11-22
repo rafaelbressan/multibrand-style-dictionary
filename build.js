@@ -1,5 +1,5 @@
 //Importantdo o Style Dictionary
-const styleguide = require("./styleguide")
+const styleguide = require("./styleguide");
 const StyleDictionary = require("style-dictionary");
 const { fileHeader } = StyleDictionary.formatHelpers;
 
@@ -14,7 +14,16 @@ const rnTransforms = [
   "color/css",
 ];
 
-const outputReferences = true;
+const cssTransforms = [
+  "attribute/cti",
+  "name/cti/kebab",
+  "time/seconds",
+  "content/icon",
+  "size/rem",
+  "color/css",
+];
+
+const outputReferences = false;
 const tokenHeader = "tokenHeader";
 
 //================================================//
@@ -111,7 +120,7 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFilter({
   name: "isFonts",
   matcher: function (token) {
-    return token.type === "custom-fontStyle";
+    return token.attributes.category === "font";
   },
 });
 
@@ -128,8 +137,7 @@ StyleDictionary.registerFilter({
   name: "isSizes",
   matcher: function (token) {
     return (
-      token.type === "dimension" &&
-      token.filePath === "tokens/globals/styleguide/sizes.json"
+      token.type === "dimension"
     );
   },
 });
@@ -139,8 +147,7 @@ StyleDictionary.registerFilter({
   name: "isBreakpoints",
   matcher: function (token) {
     return (
-      token.type === "dimension" &&
-      token.filePath === "tokens/globals/styleguide/breakpoints.json"
+      token.type === "breakpoint"
     );
   },
 });
@@ -149,7 +156,7 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFilter({
   name: "isBorders",
   matcher: function (token) {
-    return token.type === "custom-stroke";
+    return token.attributes.category === "border";
   },
 });
 
@@ -186,8 +193,104 @@ function getStyleDictionaryStyleguideConfig(brand) {
     // que os valores do "tokens/globals" serão sobrescritos pelos da marca.
 
     source: [`tokens/brands/${brand}/*.json`],
-    include: [`tokens/globals/styleguide/*.json`],
+    include: [`tokens/globals/styleguide/*.json`, `tokens/globals/plugins/*.json`],
     platforms: {
+      css: {
+        transforms: cssTransforms,
+        buildPath: `build/css/brands/${brand}/styleguide/`,
+        files: [
+          {
+            name: "colors",
+            destination: `colors.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isColors`,
+          },
+          {
+            name: "borders",
+            destination: `borders.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            name: "fonts",
+            destination: `fonts.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            name: "breakpoints",
+            destination: `breakpoints.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoints`,
+          },
+          {
+            name: "opacities",
+            destination: `opacities.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacities`,
+          },
+          {
+            name: "radius",
+            destination: `radius.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
+          },
+          {
+            name: "shadows",
+            destination: `shadows.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isShadows`,
+          },
+          {
+            name: "sizes",
+            destination: `sizes.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSizes`,
+          },
+          {
+            name: "spacings",
+            destination: `spacings.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacings`,
+          },
+        ],
+      },
       js: {
         transforms: rnTransforms,
         buildPath: `build/js/brands/${brand}/styleguide/`,
@@ -298,8 +401,24 @@ function getStyleDictionaryComponentConfig(brand, component) {
       `tokens/brands/${brand}/*.json`,
       `tokens/globals/component/*.json`,
     ],
-    include: [`tokens/globals/styleguide/*.json`],
+    include: [`tokens/globals/styleguide/*.json`, `tokens/globals/plugins/*.json`],
     platforms: {
+      css: {
+        transforms: cssTransforms,
+        buildPath: `build/css/brands/${brand}/component/`,
+        files: [
+          {
+            name: component,
+            destination: `${component}.css`,
+            format: "css/variables",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `is${capitalizeFirstLetter(component)}`,
+          },
+        ],
+      },
       js: {
         transforms: rnTransforms,
         buildPath: `build/js/brands/${brand}/component/`,

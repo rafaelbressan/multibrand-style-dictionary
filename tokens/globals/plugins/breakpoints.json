@@ -1,0 +1,44 @@
+{
+    "breakpoints": {
+      "mobile": {
+        "description": null,
+        "value": 360,
+        "type": "breakpoint"
+      },
+      "smaller": {
+        "description": null,
+        "value": 376,
+        "type": "breakpoint"
+      },
+      "small": {
+        "description": null,
+        "value": 640,
+        "type": "breakpoint"
+      },
+      "medium": {
+        "description": null,
+        "value": 768,
+        "type": "breakpoint"
+      },
+      "large": {
+        "description": null,
+        "value": 1024,
+        "type": "breakpoint"
+      },
+      "larger": {
+        "description": null,
+        "value": 1280,
+        "type": "breakpoint"
+      },
+      "extraLarge": {
+        "description": null,
+        "value": 1536,
+        "type": "breakpoint"
+      },
+      "largest": {
+        "description": null,
+        "value": 1920,
+        "type": "breakpoint"
+      }
+    }
+  }

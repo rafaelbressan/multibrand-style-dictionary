@@ -1,104 +1,88 @@
 {
-    "borders": {
-      "none": {
-        "description": null,
-        "type": "custom-stroke",
-        "value": {
-          "align": "inside",
-          "dashPattern": [],
-          "lineCap": "none",
-          "lineJoin": "miter",
-          "miterLimit": 4,
-          "weight": 0,
-          "color": "#65a300ff"
+    "border": {
+        "none": {
+            "description": null,
+            "align": {
+                "value": "{plugins.border.none.value.align}"
+            },
+            "weight": {
+                "value": "{plugins.border.none.value.weight}"
+            },
+            "style": {
+                "value": "solid"
+            }
+        },
+        "regular": {
+            "description": null,
+            "align": {
+                "value": "{plugins.border.regular.value.align}"
+            },
+            "weight": {
+                "value": "{plugins.border.regular.value.weight}"
+            },
+            "style": {
+                "value": "solid"
+            }
+        },
+        "medium": {
+            "description": null,
+            "align": {
+                "value": "{plugins.border.medium.value.align}"
+            },
+            "weight": {
+                "value": "{plugins.border.medium.value.weight}"
+            },
+            "style": {
+                "value": "solid"
+            }
+        },
+        "large": {
+            "description": null,
+            "align": {
+                "value": "{plugins.border.large.value.align}"
+            },
+            "weight": {
+                "value": "{plugins.border.large.value.weight}"
+            },
+            "style": {
+                "value": "solid"
+            }
+        },
+        "dashed-regular": {
+            "description": null,
+            "align": {
+                "value": "{plugins.border.regular.value.align}"
+            },
+            "weight": {
+                "value": "{plugins.border.regular.value.weight}"
+            },
+            "style": {
+                "value": "dashed"
+            }
+        },
+        "dashed-medium": {
+            "description": null,
+            "align": {
+                "value": "{plugins.border.medium.value.align}"
+            },
+            "weight": {
+                "value": "{plugins.border.medium.value.weight}"
+            },
+            "style": {
+                "value": "dashed"
+            }
+        },
+        "dashed-large": {
+            "description": null,
+            "align": {
+                "value": "{plugins.border.large.value.align}"
+            },
+            "weight": {
+                "value": "{plugins.border.large.value.weight}"
+            },
+            "style": {
+                "value": "dashed"
+            }
         }
-      },
-      "regular": {
-        "description": null,
-        "type": "custom-stroke",
-        "value": {
-          "align": "inside",
-          "dashPattern": [],
-          "lineCap": "none",
-          "lineJoin": "miter",
-          "miterLimit": 4,
-          "weight": 1,
-          "color": "#65a300ff"
-        }
-      },
-      "medium": {
-        "description": null,
-        "type": "custom-stroke",
-        "value": {
-          "align": "inside",
-          "dashPattern": [],
-          "lineCap": "none",
-          "lineJoin": "miter",
-          "miterLimit": 4,
-          "weight": 2,
-          "color": "#65a300ff"
-        }
-      },
-      "large": {
-        "description": null,
-        "type": "custom-stroke",
-        "value": {
-          "align": "inside",
-          "dashPattern": [],
-          "lineCap": "none",
-          "lineJoin": "miter",
-          "miterLimit": 4,
-          "weight": 4,
-          "color": "#65a300ff"
-        }
-      },
-      "dashedRegular": {
-        "description": null,
-        "type": "custom-stroke",
-        "value": {
-          "align": "inside",
-          "dashPattern": [
-            12,
-            20
-          ],
-          "lineCap": "square",
-          "lineJoin": "round",
-          "miterLimit": 4,
-          "weight": 1,
-          "color": "#65a300ff"
-        }
-      },
-      "dashedMedium": {
-        "description": null,
-        "type": "custom-stroke",
-        "value": {
-          "align": "inside",
-          "dashPattern": [
-            12,
-            20
-          ],
-          "lineCap": "square",
-          "lineJoin": "round",
-          "miterLimit": 4,
-          "weight": 2,
-          "color": "#65a300ff"
-        }
-      },
-      "dashedLarge": {
-        "description": null,
-        "type": "custom-stroke",
-        "value": {
-          "align": "inside",
-          "dashPattern": [
-            12,
-            20
-          ],
-          "lineCap": "square",
-          "lineJoin": "round",
-          "miterLimit": 4,
-          "weight": 4,
-          "color": "#65a300ff"
-        }
-      }
     }
-  }
+}

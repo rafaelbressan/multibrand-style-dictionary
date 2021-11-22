@@ -1,23 +1,15 @@
 {
     "font": {
       "heading": {
-        "h1": {
-          "type": "custom-fontStyle",
-          "value": {
-            "fontSize": 72,
-            "textDecoration": "none",
-            "fontFamily": "Poppins",
-            "fontWeight": 600,
-            "fontStyle": "normal",
-            "fontStretch": "normal",
-            "letterSpacing": 0,
-            "lineHeight": 96,
-            "paragraphIndent": 0,
-            "paragraphSpacing": 0,
-            "textCase": "none"
+        "1": {
+          "font-size":{
+            "value":5
+          },
+          "text-decoration":{
+            "value":2
           }
         },
-        "h2": {
+        "2": {
           "type": "custom-fontStyle",
           "value": {
             "fontSize": 48,
