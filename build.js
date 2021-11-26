@@ -108,11 +108,11 @@ StyleDictionary.registerFilter({
   },
 });
 
-//Filtro das cores base
+//Filtro das cores
 StyleDictionary.registerFilter({
   name: "isColors",
   matcher: function (token) {
-    return token.attributes.category === "color";
+    return token.attributes.category === "color" && token.filePath !== "tokens/globals/plugins/colors.json";
   },
 });
 
@@ -120,7 +120,7 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFilter({
   name: "isFonts",
   matcher: function (token) {
-    return token.attributes.category === "font";
+    return token.attributes.category === "font" && token.filePath !== "tokens/globals/plugins/fonts.json";
   },
 });
 
@@ -128,7 +128,7 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFilter({
   name: "isShadows",
   matcher: function (token) {
-    return token.type === "custom-shadow";
+    return token.attributes.category === "effect";
   },
 });
 
@@ -156,7 +156,7 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFilter({
   name: "isBorders",
   matcher: function (token) {
-    return token.attributes.category === "border";
+    return token.attributes.category === "border" && token.filePath !== "tokens/globals/plugins/borders.json";
   },
 });
 

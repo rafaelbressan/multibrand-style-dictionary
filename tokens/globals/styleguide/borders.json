@@ -3,10 +3,10 @@
         "none": {
             "description": null,
             "align": {
-                "value": "{plugins.border.none.value.align}"
+                "value": "{border.none.value.align}"
             },
             "weight": {
-                "value": "{plugins.border.none.value.weight}"
+                "value": "{border.none.value.weight}"
             },
             "style": {
                 "value": "solid"
@@ -15,10 +15,10 @@
         "regular": {
             "description": null,
             "align": {
-                "value": "{plugins.border.regular.value.align}"
+                "value": "{border.regular.value.align}"
             },
             "weight": {
-                "value": "{plugins.border.regular.value.weight}"
+                "value": "{border.regular.value.weight}"
             },
             "style": {
                 "value": "solid"
@@ -27,10 +27,10 @@
         "medium": {
             "description": null,
             "align": {
-                "value": "{plugins.border.medium.value.align}"
+                "value": "{border.medium.value.align}"
             },
             "weight": {
-                "value": "{plugins.border.medium.value.weight}"
+                "value": "{border.medium.value.weight}"
             },
             "style": {
                 "value": "solid"
@@ -39,10 +39,10 @@
         "large": {
             "description": null,
             "align": {
-                "value": "{plugins.border.large.value.align}"
+                "value": "{border.large.value.align}"
             },
             "weight": {
-                "value": "{plugins.border.large.value.weight}"
+                "value": "{border.large.value.weight}"
             },
             "style": {
                 "value": "solid"
@@ -51,10 +51,10 @@
         "dashed-regular": {
             "description": null,
             "align": {
-                "value": "{plugins.border.regular.value.align}"
+                "value": "{border.regular.value.align}"
             },
             "weight": {
-                "value": "{plugins.border.regular.value.weight}"
+                "value": "{border.regular.value.weight}"
             },
             "style": {
                 "value": "dashed"
@@ -63,10 +63,10 @@
         "dashed-medium": {
             "description": null,
             "align": {
-                "value": "{plugins.border.medium.value.align}"
+                "value": "{border.medium.value.align}"
             },
             "weight": {
-                "value": "{plugins.border.medium.value.weight}"
+                "value": "{border.medium.value.weight}"
             },
             "style": {
                 "value": "dashed"
@@ -75,10 +75,10 @@
         "dashed-large": {
             "description": null,
             "align": {
-                "value": "{plugins.border.large.value.align}"
+                "value": "{border.large.value.align}"
             },
             "weight": {
-                "value": "{plugins.border.large.value.weight}"
+                "value": "{border.large.value.weight}"
             },
             "style": {
                 "value": "dashed"

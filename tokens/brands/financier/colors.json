@@ -1,0 +1,56 @@
+{
+    "color": {
+        "brand": {
+            "primary": {
+                "20": {
+                    "value": "#b5b7bc"
+                },
+                "50": {
+                    "value": "#7b7f88"
+                },
+                "100": {
+                    "value": "#545965"
+                },
+                "200": {
+                    "value": "#3e4251"
+                },
+                "800": {
+                    "value": "#292E34"
+                },
+                "base": {
+                    "value": "{color.brand.primary.800.value}"
+                },
+                "onPrimary": {
+                    "main": {
+                        "value": "#ffffffff"
+                    }
+                }
+            },
+            "secondary": {
+                "20": {
+                    "value": "#ece5ca"
+                },
+                "50": {
+                    "value": "#e2d29b"
+                },
+                "100": {
+                    "value": "#D6B246"
+                },
+                "200": {
+                    "value": "#9e863f"
+                },
+                "800": {
+                    "value": "#786737"
+                },
+                "base": {
+                    "value": "{color.brand.secondary.100.value}"
+                },
+                "onSecondary": {
+                    "main": {
+                        "value": "{color.context.text.onSurface.emphasis}"
+                    }
+                }
+            }
+        }
+    }
+}

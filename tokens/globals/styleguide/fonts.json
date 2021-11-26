@@ -3,10 +3,28 @@
       "heading": {
         "1": {
           "font-size":{
-            "value":5
+            "value":"{plugins.font.heading.h1.value.fontSize}"
           },
           "text-decoration":{
-            "value":2
+            "value":"{plugins.font.heading.h1.value.textDecoration}"
+          },
+          "font-family":{
+            "value":"{plugins.font.heading.h1.value.fontFamily}"
+          },
+          "font-weight":{
+            "value":"{plugins.font.heading.h1.value.fontWeight}"
+          },
+          "font-style":{
+            "value":"{plugins.font.heading.h1.value.fontStyle}"
+          },
+          "letter-spacing": {
+            "value":"{plugins.font.heading.h1.value.letterSpacing}"
+          },
+          "line-height": {
+            "value":"{plugins.font.heading.h1.value.lineHeight}"
+          },
+          "text-case": {
+            "value":"{plugins.font.heading.h1.value.textCase}"
           }
         },
         "2": {
