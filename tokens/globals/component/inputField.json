@@ -138,15 +138,15 @@
         "borders": {
             "filled": {
                 "value": {
-                    "borderBottom": "{borders.medium.value.weight}"
+                    "borderBottom": "{border.medium.weight.value}"
                 }
             },
             "outlined": {
                 "value": {
-                    "borderBottom": "{borders.regular.value.weight}",
-                    "borderLeft": "{borders.regular.value.weight}",
-                    "borderRight": "{borders.regular.value.weight}",
-                    "borderTop": "{borders.regular.value.weight}"
+                    "borderBottom": "{border.regular.weight.value}",
+                    "borderLeft": "{border.regular.weight.value}",
+                    "borderRight": "{border.regular.weight.value}",
+                    "borderTop": "{border.regular.weight.value}"
                 }
             }
         },
@@ -174,14 +174,13 @@
                 }
             },
             "statusMargin": {
-                "value":{
-                    "margintop": "{spacing.smallest.top.value}"
+                "value": {
+                    "marginTop": "{spacing.smallest.top.value}"
                 }
-                
             },
             "assistiveMargin": {
                 "value": {
-                    "margintop": "{spacing.smallest.top.value}"
+                    "marginTop": "{spacing.smallest.top.value}"
                 }
             }
         },

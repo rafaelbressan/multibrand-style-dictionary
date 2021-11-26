@@ -1,23 +1,33 @@
 {
     "font": {
       "heading": {
-        "h1": {
-          "type": "custom-fontStyle",
-          "value": {
-            "fontSize": 72,
-            "textDecoration": "none",
-            "fontFamily": "Poppins",
-            "fontWeight": 600,
-            "fontStyle": "normal",
-            "fontStretch": "normal",
-            "letterSpacing": 0,
-            "lineHeight": 96,
-            "paragraphIndent": 0,
-            "paragraphSpacing": 0,
-            "textCase": "none"
+        "1": {
+          "font-size":{
+            "value":"{plugins.font.heading.h1.value.fontSize}"
+          },
+          "text-decoration":{
+            "value":"{plugins.font.heading.h1.value.textDecoration}"
+          },
+          "font-family":{
+            "value":"{plugins.font.heading.h1.value.fontFamily}"
+          },
+          "font-weight":{
+            "value":"{plugins.font.heading.h1.value.fontWeight}"
+          },
+          "font-style":{
+            "value":"{plugins.font.heading.h1.value.fontStyle}"
+          },
+          "letter-spacing": {
+            "value":"{plugins.font.heading.h1.value.letterSpacing}"
+          },
+          "line-height": {
+            "value":"{plugins.font.heading.h1.value.lineHeight}"
+          },
+          "text-case": {
+            "value":"{plugins.font.heading.h1.value.textCase}"
           }
         },
-        "h2": {
+        "2": {
           "type": "custom-fontStyle",
           "value": {
             "fontSize": 48,
