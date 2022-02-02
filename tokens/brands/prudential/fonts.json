@@ -1,0 +1,194 @@
+{
+    "font": {
+        "heading": {
+            "h1": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Regular"
+                }
+            },
+            "h2": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Regular"
+                }
+            },
+            "h3": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Regular"
+                }
+            },
+            "h4": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Regular"
+                }
+            },
+            "hn": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Bold"
+                }
+            }
+        },
+        "subheading": {
+            "regular": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Regular"
+                }
+            },
+            "bold": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Bold"
+                }
+            }
+        },
+        "base": {
+            "default": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Bold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "uppercase": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Bold"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                }
+            },
+            "small": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Bold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "uppercase": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Bold"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                }
+            },
+            "tiny": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Bold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                }
+            },
+            "crumb": {
+                "regular": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "bold": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Bold"
+                    }
+                },
+                "italic": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                },
+                "uppercase": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Bold"
+                    }
+                },
+                "link": {
+                    "type": "custom-fontStyle",
+                    "value": {
+                        "fontFamily": "Opensans-Regular"
+                    }
+                }
+            }
+        },
+        "button": {
+            "default": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Bold"
+                }
+            },
+            "small": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Bold"
+                }
+            },
+            "large": {
+                "type": "custom-fontStyle",
+                "value": {
+                    "fontFamily": "Opensans-Bold"
+                }
+            }
+        }
+    }
+}
