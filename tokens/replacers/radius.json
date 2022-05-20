@@ -1,0 +1,44 @@
+{
+    "radius": {
+        "none": {
+            "category": "radius",
+            "value": "{radii.none.radii.topLeft.value}"
+        },
+        "small": {
+            "category": "radius",
+            "value": "{radii.small.radii.topLeft.value}"
+        },
+        "regular": {
+            "category": "radius",
+            "value": "{radii.regular.radii.topLeft.value}"
+        },
+        "medium": {
+            "category": "radius",
+            "value": "{radii.medium.radii.topLeft.value}"
+        },
+        "large": {
+            "category": "radius",
+            "value": "{radii.large.radii.topLeft.value}"
+        },
+        "larger": {
+            "category": "radius",
+            "value": "{radii.larger.radii.topLeft.value}"
+        },
+        "extra-large": {
+            "category": "radius",
+            "value": "{radii.extra-large.radii.topLeft.value}"
+        },
+        "huge": {
+            "category": "radius",
+            "value": "{radii.huge.radii.topLeft.value}"
+        },
+        "hugest": {
+            "category": "radius",
+            "value": "{radii.hugest.radii.topLeft.value}"
+        },
+        "full": {
+            "category": "radius",
+            "value": "{radii.full.radii.topLeft.value}"
+        }
+    }
+}

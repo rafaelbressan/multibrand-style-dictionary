@@ -1,0 +1,220 @@
+{
+    "spacing": {
+        "zero": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.zero.top.value}"
+            },
+            "y": {
+                "value": "{spacing.zero.top.value}"
+            },
+            "x": {
+                "value": "{spacing.zero.top.value}"
+            }
+        },
+        "tiny": {
+            "category": "spacing",
+            "inset": {
+                "value": 2
+            },
+            "y": {
+                "value": "{spacing.tiny.top.value}"
+            },
+            "x": {
+                "value": "{spacing.tiny.top.value}"
+            }
+        },
+        "smallest": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.smallest.top.value}"
+            },
+            "y": {
+                "value": "{spacing.smallest.top.value}"
+            },
+            "x": {
+                "value": "{spacing.smallest.top.value}"
+            }
+        },
+        "smaller": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.smaller.top.value}"
+            },
+            "y": {
+                "value": "{spacing.smaller.top.value}"
+            },
+            "x": {
+                "value": "{spacing.smaller.top.value}"
+            }
+        },
+        "small": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.small.top.value}"
+            },
+            "y": {
+                "value": "{spacing.small.top.value}"
+            },
+            "x": {
+                "value": "{spacing.small.top.value}"
+            }
+        },
+        "regular": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.regular.top.value}"
+            },
+            "y": {
+                "value": "{spacing.regular.top.value}"
+            },
+            "x": {
+                "value": "{spacing.regular.top.value}"
+            }
+        },
+        "medium": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.medium.top.value}"
+            },
+            "y": {
+                "value": "{spacing.medium.top.value}"
+            },
+            "x": {
+                "value": "{spacing.medium.top.value}"
+            }
+        },
+        "large": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.large.top.value}"
+            },
+            "y": {
+                "value": "{spacing.large.top.value}"
+            },
+            "x": {
+                "value": "{spacing.large.top.value}"
+            }
+        },
+        "larger": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.larger.top.value}"
+            },
+            "y": {
+                "value": "{spacing.larger.top.value}"
+            },
+            "x": {
+                "value": "{spacing.larger.top.value}"
+            }
+        },
+        "extra-large": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.extra-large.top.value}"
+            },
+            "y": {
+                "value": "{spacing.extra-large.top.value}"
+            },
+            "x": {
+                "value": "{spacing.extra-large.top.value}"
+            }
+        },
+        "big": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.big.top.value}"
+            },
+            "y": {
+                "value": "{spacing.big.top.value}"
+            },
+            "x": {
+                "value": "{spacing.big.top.value}"
+            }
+        },
+        "bigger": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.bigger.top.value}"
+            },
+            "y": {
+                "value": "{spacing.bigger.top.value}"
+            },
+            "x": {
+                "value": "{spacing.bigger.top.value}"
+            }
+        },
+        "extra-big": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.extra-big.top.value}"
+            },
+            "y": {
+                "value": "{spacing.extra-big.top.value}"
+            },
+            "x": {
+                "value": "{spacing.extra-big.top.value}"
+            }
+        },
+        "huge": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.huge.top.value}"
+            },
+            "y": {
+                "value": "{spacing.huge.top.value}"
+            },
+            "x": {
+                "value": "{spacing.huge.top.value}"
+            }
+        },
+        "huger": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.huger.top.value}"
+            },
+            "y": {
+                "value": "{spacing.huger.top.value}"
+            },
+            "x": {
+                "value": "{spacing.huger.top.value}"
+            }
+        },
+        "extra-huge": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.extra-huge.top.value}"
+            },
+            "y": {
+                "value": "{spacing.extra-huge.top.value}"
+            },
+            "x": {
+                "value": "{spacing.extra-huge.top.value}"
+            }
+        },
+        "hugest": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.hugest.top.value}"
+            },
+            "y": {
+                "value": "{spacing.hugest.top.value}"
+            },
+            "x": {
+                "value": "{spacing.hugest.top.value}"
+            }
+        },
+        "colossal": {
+            "category": "spacing",
+            "inset": {
+                "value": "{spacing.colossal.top.value}"
+            },
+            "y": {
+                "value": "{spacing.colossal.top.value}"
+            },
+            "x": {
+                "value": "{spacing.colossal.top.value}"
+            }
+        }
+    }
+}

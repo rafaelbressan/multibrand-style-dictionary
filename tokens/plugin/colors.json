@@ -334,6 +334,12 @@
           "value": "rgba(242, 242, 243, 1)",
           "type": "color"
         },
+        "35": {
+          "category": "color",
+          "exportKey": "color",
+          "value": "rgba(228, 228, 228, 1)",
+          "type": "color"
+        },
         "50": {
           "category": "color",
           "exportKey": "color",

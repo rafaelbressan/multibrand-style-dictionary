@@ -1,0 +1,44 @@
+{
+    "opacity": {
+        "lightest": {
+            "category":"opacity",
+            "value": 0.08
+        },
+        "lighter": {
+            "category":"opacity",
+            "value": 0.16
+        },
+        "light": {
+            "category":"opacity",
+            "value": 0.24
+        },
+        "medium": {
+            "category":"opacity",
+            "value": 0.32
+        },
+        "regular": {
+            "category":"opacity",
+            "value": 0.40
+        },
+        "half": {
+            "category":"opacity",
+            "value": 0.50
+        },
+        "intense": {
+            "category":"opacity",
+            "value": 0.64
+        },
+        "semi-opaque": {
+            "category":"opacity",
+            "value": 0.72
+        },
+        "extra-opaque": {
+            "category":"opacity",
+            "value": 0.82
+        },
+        "opaquest": {
+            "category":"opacity",
+            "value": 0.92
+        }
+    }
+}

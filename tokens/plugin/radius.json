@@ -1,0 +1,389 @@
+{
+  "radii": {
+    "none": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radiusType": {
+        "value": "mixed",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 0,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 0,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 0,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 0,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "small": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 2,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 2,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 2,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 2,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 2,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "regular": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 4,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 4,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 4,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 4,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 4,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "medium": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 6,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 6,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 6,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 6,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 6,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "large": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 8,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 8,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 8,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 8,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 8,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "larger": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 10,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 10,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 10,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 10,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 10,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "extra-large": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 12,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 12,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 12,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 12,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 12,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "huge": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 16,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 16,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 16,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 16,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 16,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "hugest": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 24,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 24,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 24,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 24,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 24,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "full": {
+      "category": "radius",
+      "exportKey": "radius",
+      "radius": {
+        "value": 320,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "radiusType": {
+        "value": "single",
+        "type": "string"
+      },
+      "radii": {
+        "topLeft": {
+          "value": 320,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "topRight": {
+          "value": 320,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomRight": {
+          "value": 320,
+          "type": "number",
+          "unit": "pixel"
+        },
+        "bottomLeft": {
+          "value": 320,
+          "type": "number",
+          "unit": "pixel"
+        }
+      },
+      "smoothing": {
+        "value": 0,
+        "type": "number"
+      }
+    }
+  }
+}

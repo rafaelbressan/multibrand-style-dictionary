@@ -1,0 +1,67 @@
+{
+    "borders": {
+        "none": {
+            "category": "borders",
+            "weight": {
+                "value": "{borders.none.strokeWeight.value}"
+            },
+            "style": {
+                "value": "none"
+            }
+        },
+        "regular": {
+            "category": "borders",
+            "weight": {
+                "value": "{borders.regular.strokeWeight.value}"
+            },
+            "style": {
+                "value": "solid"
+            }
+        },
+        "medium": {
+            "category": "borders",
+            "weight": {
+                "value": "{borders.medium.strokeWeight.value}"
+            },
+            "style": {
+                "value": "solid"
+            }
+        },
+        "large": {
+            "category": "borders",
+            "weight": {
+                "value": "{borders.large.strokeWeight.value}"
+            },
+            "style": {
+                "value": "solid"
+            }
+        },
+        "dashed-regular": {
+            "category": "borders",
+            "weight": {
+                "value": "{borders.dashed-regular.strokeWeight.value}"
+            },
+            "style": {
+                "value": "dashed"
+            }
+        },
+        "dashed-medium": {
+            "category": "borders",
+            "weight": {
+                "value": "{borders.dashed-medium.strokeWeight.value}"
+            },
+            "style": {
+                "value": "dashed"
+            }
+        },
+        "dashed-large": {
+            "category": "borders",
+            "weight": {
+                "value": "{borders.dashed-large.strokeWeight.value}"
+            },
+            "style": {
+                "value": "dashed"
+            }
+        }
+    }
+}
