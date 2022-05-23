@@ -1,0 +1,242 @@
+{
+    "borders": {
+        "none": {
+            "category": "border",
+            "exportKey": "border",
+            "strokeAlign": {
+                "value": "inside",
+                "type": "string"
+            },
+            "dashPattern": {
+                "value": "0, 0",
+                "type": "string"
+            },
+            "strokeCap": {
+                "value": "none",
+                "type": "string"
+            },
+            "strokeJoin": {
+                "value": "miter",
+                "type": "string"
+            },
+            "strokeMiterLimit": {
+                "value": 4,
+                "type": "number",
+                "unit": "degree"
+            },
+            "strokeWeight": {
+                "value": 0,
+                "type": "number",
+                "unit": "pixel"
+            },
+            "stroke": {
+                "value": "rgba(101, 163, 0, 1)",
+                "type": "color"
+            }
+        },
+        "regular": {
+            "category": "border",
+            "exportKey": "border",
+            "strokeAlign": {
+                "value": "inside",
+                "type": "string"
+            },
+            "dashPattern": {
+                "value": "0, 0",
+                "type": "string"
+            },
+            "strokeCap": {
+                "value": "none",
+                "type": "string"
+            },
+            "strokeJoin": {
+                "value": "miter",
+                "type": "string"
+            },
+            "strokeMiterLimit": {
+                "value": 4,
+                "type": "number",
+                "unit": "degree"
+            },
+            "strokeWeight": {
+                "value": 1,
+                "type": "number",
+                "unit": "pixel"
+            },
+            "stroke": {
+                "value": "rgba(101, 163, 0, 1)",
+                "type": "color"
+            }
+        },
+        "medium": {
+            "category": "border",
+            "exportKey": "border",
+            "strokeAlign": {
+                "value": "inside",
+                "type": "string"
+            },
+            "dashPattern": {
+                "value": "0, 0",
+                "type": "string"
+            },
+            "strokeCap": {
+                "value": "none",
+                "type": "string"
+            },
+            "strokeJoin": {
+                "value": "miter",
+                "type": "string"
+            },
+            "strokeMiterLimit": {
+                "value": 4,
+                "type": "number",
+                "unit": "degree"
+            },
+            "strokeWeight": {
+                "value": 2,
+                "type": "number",
+                "unit": "pixel"
+            },
+            "stroke": {
+                "value": "rgba(101, 163, 0, 1)",
+                "type": "color"
+            }
+        },
+        "large": {
+            "category": "border",
+            "exportKey": "border",
+            "strokeAlign": {
+                "value": "inside",
+                "type": "string"
+            },
+            "dashPattern": {
+                "value": "0, 0",
+                "type": "string"
+            },
+            "strokeCap": {
+                "value": "none",
+                "type": "string"
+            },
+            "strokeJoin": {
+                "value": "miter",
+                "type": "string"
+            },
+            "strokeMiterLimit": {
+                "value": 4,
+                "type": "number",
+                "unit": "degree"
+            },
+            "strokeWeight": {
+                "value": 4,
+                "type": "number",
+                "unit": "pixel"
+            },
+            "stroke": {
+                "value": "rgba(101, 163, 0, 1)",
+                "type": "color"
+            }
+        },
+        "dashed-regular": {
+            "category": "border",
+            "exportKey": "border",
+            "strokeAlign": {
+                "value": "inside",
+                "type": "string"
+            },
+            "dashPattern": {
+                "value": "12, 20",
+                "type": "string"
+            },
+            "strokeCap": {
+                "value": "square",
+                "type": "string"
+            },
+            "strokeJoin": {
+                "value": "round",
+                "type": "string"
+            },
+            "strokeMiterLimit": {
+                "value": 4,
+                "type": "number",
+                "unit": "degree"
+            },
+            "strokeWeight": {
+                "value": 1,
+                "type": "number",
+                "unit": "pixel"
+            },
+            "stroke": {
+                "value": "rgba(101, 163, 0, 1)",
+                "type": "color"
+            }
+        },
+        "dashed-medium": {
+            "category": "border",
+            "exportKey": "border",
+            "strokeAlign": {
+                "value": "inside",
+                "type": "string"
+            },
+            "dashPattern": {
+                "value": "12, 20",
+                "type": "string"
+            },
+            "strokeCap": {
+                "value": "square",
+                "type": "string"
+            },
+            "strokeJoin": {
+                "value": "round",
+                "type": "string"
+            },
+            "strokeMiterLimit": {
+                "value": 4,
+                "type": "number",
+                "unit": "degree"
+            },
+            "strokeWeight": {
+                "value": 2,
+                "type": "number",
+                "unit": "pixel"
+            },
+            "stroke": {
+                "value": "rgba(101, 163, 0, 1)",
+                "type": "color"
+            }
+        },
+        "dashed-large": {
+            "category": "border",
+            "exportKey": "border",
+            "strokeAlign": {
+                "value": "inside",
+                "type": "string"
+            },
+            "dashPattern": {
+                "value": "12, 20",
+                "type": "string"
+            },
+            "strokeCap": {
+                "value": "square",
+                "type": "string"
+            },
+            "strokeJoin": {
+                "value": "round",
+                "type": "string"
+            },
+            "strokeMiterLimit": {
+                "value": 4,
+                "type": "number",
+                "unit": "degree"
+            },
+            "strokeWeight": {
+                "value": 4,
+                "type": "number",
+                "unit": "pixel"
+            },
+            "stroke": {
+                "value": "rgba(101, 163, 0, 1)",
+                "type": "color"
+            }
+        }
+    }
+}

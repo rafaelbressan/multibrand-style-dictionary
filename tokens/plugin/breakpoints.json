@@ -1,0 +1,60 @@
+{
+  "breakpoints": {
+    "mobile": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 360,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "smaller": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 376,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "small": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 640,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "medium": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 768,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "large": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 1024,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "larger": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 1280,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "extra-large": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 1536,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "largest": {
+      "category": "breakpoint",
+      "exportKey": "breakpoint",
+      "value": 1920,
+      "type": "number",
+      "unit": "pixel"
+    }
+  }
+}

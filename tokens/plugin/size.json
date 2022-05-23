@@ -1,0 +1,137 @@
+{
+  "sizes": {
+    "colossal": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 128,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "hugest": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 96,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "extra-huge": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 72,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "huger": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 64,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "huge": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 56,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "extra-big": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 48,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "bigger": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 40,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "big": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 32,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "extra-large": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 24,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "larger": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 20,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "large": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 18,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "medium": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 16,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "regular": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 14,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "small": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 12,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "smaller": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 10,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "smallest": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 8,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "tiny": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 4,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "tinier": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 2,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "tiniest": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 1,
+      "type": "number",
+      "unit": "pixel"
+    }
+  }
+}

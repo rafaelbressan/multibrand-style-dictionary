@@ -1,26 +1,28 @@
-//Importantdo o Style Dictionary
-const styleguide = require("./styleguide");
+//Importantdo o Style Dictionary e helpers
 const StyleDictionary = require("style-dictionary");
+const _ = require("lodash");
 const { fileHeader } = StyleDictionary.formatHelpers;
+
+function getBasePxFontSize(options) {
+  return (options && options.basePxFontSize) || 16;
+}
 
 //================================================//
 
 //Concentrando açgumas settings e transformações dos tokens em uma só variável
 
-const rnTransforms = [
+const transformations = [
   "attribute/cti",
-  "name/cti/camel",
-  "size/object",
+  "name/ti/kebab",
+  "attribute/color",
   "color/css",
-];
-
-const cssTransforms = [
-  "attribute/cti",
-  "name/cti/kebab",
   "time/seconds",
-  "content/icon",
-  "size/rem",
-  "color/css",
+  "breakpoint/px",
+  "font/rem",
+  "spacing/pxToRem",
+  "size/pxToRem",
+  "border/pxToRem",
+  "radius/pxToRem"
 ];
 
 const outputReferences = false;
@@ -33,16 +35,6 @@ const tokenHeader = "tokenHeader";
 const fs = require("fs");
 const brandFolders = fs.readdirSync("./tokens/brands");
 
-const componentFolders = fs.readdirSync("./tokens/globals/component");
-const componentList = componentFolders.map((element) => {
-  return element.split(".json")[0];
-});
-
-const styleguideFolders = fs.readdirSync("./tokens/globals/styleguide");
-const styleguideList = styleguideFolders.map((element) => {
-  return element.split(".json")[0];
-});
-
 //================================================//
 
 //Aplicando um Header Customizável
@@ -52,6 +44,113 @@ StyleDictionary.registerFileHeader({
   fileHeader: function (defaultMessage) {
     return [...defaultMessage, `Made by Pagar.me BaaS`];
   },
+});
+
+//================================================//
+
+//Filtros
+
+function isColor(token) {
+  return token.attributes.category === 'color';
+}
+
+function isSpacing(token) {
+  return token.attributes.category === 'spacing' && token.filePath !== 'tokens/plugin/spacing.json';
+}
+
+function isFonts(token) {
+  return token.attributes.category === 'font' && !(['paragraphIndent', '_fontStyleOld', 'paragraphSpacing'].includes(token.attributes.subitem)) && !(['paragraphIndent', '_fontStyleOld', 'paragraphSpacing'].includes(token.attributes.state));
+}
+
+function isFontStyles(token) {
+  return ['fontSize', 'letterSpacing', 'lineHeight'].includes(token.attributes.subitem) || ['fontSize', 'letterSpacing', 'lineHeight'].includes(token.attributes.state);
+}
+
+function isSize(token) {
+  return token.category === 'size';
+}
+
+function isBreakpoint(token) {
+  return token.category === 'breakpoint';
+}
+
+function isEffects(token) {
+  return token.attributes.category === 'effect' && !(['type'].includes(token.attributes.item));
+}
+
+function isOpacity(token) {
+  return token.attributes.category === 'opacity';
+}
+
+function isBorders(token) {
+  return token.attributes.category === 'borders' && token.filePath !== 'tokens/plugin/borders.json';
+}
+
+function isBorderWeight(token) {
+  return token.attributes.item === 'weight'
+}
+
+function isRadius(token) {
+  return token.attributes.category === 'radius' && token.filePath !== 'tokens/plugin/radius.json';
+}
+
+//Filtro das cores
+StyleDictionary.registerFilter({
+  name: "isColors",
+  matcher: isColor
+});
+
+//Filtro das fontes
+StyleDictionary.registerFilter({
+  name: "isFonts",
+  matcher: isFonts
+});
+
+StyleDictionary.registerFilter({
+  name: "isFontStyles",
+  matcher: isFontStyles
+});
+
+//Filtro dos espaçamentos
+StyleDictionary.registerFilter({
+  name: "isSpacing",
+  matcher: isSpacing
+});
+
+//Filtro dos tamanho
+StyleDictionary.registerFilter({
+  name: "isSize",
+  matcher: isSize
+});
+
+//Filtro dos breakpoints
+StyleDictionary.registerFilter({
+  name: "isBreakpoint",
+  matcher: isBreakpoint
+});
+
+//Filtro dos efeitos
+StyleDictionary.registerFilter({
+  name: "isEffects",
+  matcher: isEffects
+});
+
+//Filtro das opacidades
+StyleDictionary.registerFilter({
+  name: "isOpacity",
+  matcher: isOpacity
+});
+
+//Filtro das bordas
+StyleDictionary.registerFilter({
+  name: "isBorders",
+  matcher: isBorders
+});
+
+//Filtro dos radius
+StyleDictionary.registerFilter({
+  name: "isRadius",
+  matcher: isRadius
 });
 
 //================================================//
@@ -72,228 +171,163 @@ StyleDictionary.registerFormat({
   },
 });
 
-//================================================//
+//Registrando transformação kebab sem prefixo
 
-//Função de criação do nome do filtro dos tokens
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-//================================================//
-
-//Styleguides
-
-//Filtro de Espaçamento
-StyleDictionary.registerFilter({
-  name: "isSpacings",
-  matcher: function (token) {
-    return token.attributes.category === "spacing";
-  },
-});
-
-//Filtro de opacidades / transparência
-StyleDictionary.registerFilter({
-  name: "isOpacities",
-  matcher: function (token) {
-    return token.type === "opacity";
-  },
-});
-
-//Filtro de tamanhos de bordas
-StyleDictionary.registerFilter({
-  name: "isRadius",
-  matcher: function (token) {
-    return token.type === "custom-radius";
-  },
-});
-
-//Filtro das cores
-StyleDictionary.registerFilter({
-  name: "isColors",
-  matcher: function (token) {
-    return token.attributes.category === "color" && token.filePath !== "tokens/globals/plugins/colors.json";
-  },
-});
-
-//Filtro de fontes / tipografia
-StyleDictionary.registerFilter({
-  name: "isFonts",
-  matcher: function (token) {
-    return token.attributes.category === "font" && token.filePath !== "tokens/globals/plugins/fonts.json";
-  },
-});
-
-//Filtro de sombras
-StyleDictionary.registerFilter({
-  name: "isShadows",
-  matcher: function (token) {
-    return token.attributes.category === "effect";
-  },
-});
-
-//Filtro de tamanhos
-StyleDictionary.registerFilter({
-  name: "isSizes",
-  matcher: function (token) {
-    return (
-      token.type === "dimension"
-    );
-  },
-});
-
-//Filtro de breakpoionts
-StyleDictionary.registerFilter({
-  name: "isBreakpoints",
-  matcher: function (token) {
-    return (
-      token.type === "breakpoint"
-    );
-  },
-});
-
-//Filtro de bordas
-StyleDictionary.registerFilter({
-  name: "isBorders",
-  matcher: function (token) {
-    return token.attributes.category === "border" && token.filePath !== "tokens/globals/plugins/borders.json";
-  },
+StyleDictionary.registerTransform({
+  name: 'name/ti/kebab',
+  type: 'name',
+  transformer: function (token, options) {
+    return (_.kebabCase([options.prefix].concat(token.path.slice(1, token.path.length)).join(' ')));
+  }
 });
 
 //================================================//
 
-//Components
+//Registrando transformação de valores de font para rem
 
-//Função de criação de filtros dos componentes
-function filterComponent(component) {
-  var filterComponentMatcher = {
-    name: `is${capitalizeFirstLetter(component)}`,
-    matcher: function (token) {
-      return token.attributes.category === component;
-    },
-  };
-  StyleDictionary.registerFilter(filterComponentMatcher);
-}
+StyleDictionary.registerTransform({
+  name: 'font/rem',
+  type: 'value',
+  matcher: isFontStyles,
+  transitive: true,
+  transformer: (token, options) => {
+    const baseFont = getBasePxFontSize(options);
+    const floatVal = parseFloat(token.value);
 
-//Criação de filtros de componentes baseados nos JSONs nas pastas de componentes
-componentList.forEach(function (component) {
-  filterComponent(component);
+    if (isNaN(floatVal)) {
+      throwSizeError(token.name, token.value, 'rem');
+    }
+
+    if (floatVal === 0) {
+      return '0';
+    }
+
+    return `${floatVal / baseFont}rem`;
+  }
+});
+
+//================================================//
+
+//Registrando transformação de spacing para rem
+
+StyleDictionary.registerTransform({
+  name: 'spacing/pxToRem',
+  type: 'value',
+  matcher: isSpacing,
+  transformer: (token, options) => {
+    const baseFont = getBasePxFontSize(options);
+    const floatVal = parseFloat(token.value);
+
+    if (isNaN(floatVal)) {
+      throwSizeError(token.name, token.value, 'rem');
+    }
+
+    if (floatVal === 0) {
+      return '0';
+    }
+
+    return `${floatVal / baseFont}rem`;
+  }
+});
+
+//================================================//
+
+//Registrando transformação de breakpoint para pixel
+
+StyleDictionary.registerTransform({
+  name: 'breakpoint/px',
+  type: 'value',
+  matcher: isBreakpoint,
+  transformer: (token) => {
+    const floatVal = parseFloat(token.value);
+
+    if (isNaN(floatVal)) {
+      throwSizeError(token.name, token.value, 'px');
+    }
+
+    if (floatVal === 0) {
+      return '0';
+    }
+
+    return `${floatVal}px`;
+  }
+});
+
+//================================================//
+
+//Registrando transformação de border para rem
+
+StyleDictionary.registerTransform({
+  name: 'border/pxToRem',
+  type: 'value',
+  transitive:true,
+  matcher: isBorderWeight,
+  transformer: (token, options) => {
+    const baseFont = getBasePxFontSize(options);
+    const floatVal = parseFloat(token.value);
+    
+    if (isNaN(floatVal)) {
+      throwSizeError(token.name, token.value, 'rem');
+    }
+
+    if (floatVal === 0) {
+      return '0';
+    }
+
+    return `${floatVal / baseFont}rem`;
+  }
+});
+
+//================================================//
+
+//Registrando transformação de radius para rem
+
+StyleDictionary.registerTransform({
+  name: 'radius/pxToRem',
+  type: 'value',
+  transitive: true,
+  matcher: isRadius,
+  transformer: (token, options) => {
+    const baseFont = getBasePxFontSize(options);
+    const floatVal = parseFloat(token.value);
+
+    if (isNaN(floatVal)) {
+      throwSizeError(token.name, token.value, 'rem');
+    }
+
+    if (floatVal === 0) {
+      return '0';
+    }
+
+    return `${floatVal / baseFont}rem`;
+  }
 });
 
 //================================================//
 
 //Criação da função para gerar os styleguides
 
-function getStyleDictionaryStyleguideConfig(brand) {
+function getStyleDictionaryStyles(brand) {
   return {
-    // O arquivo Source sobrescreve os valores dos arquivos globais.
+    // O arquivo "source" sobrescreve os valores dos arquivos colocados em "include".
 
     // Logo, toda vez que precisar adicionar algum arquivo .json com alguma configuração personalizada de
-    // tamanho, cor, fonte, etc. na pasta da marca, é só adicionar dentro da pasta do cliente específico,
+    // tamanho, cor, fonte, etc. na pasta da marca, é só adicionar dentro da pasta da brand específica,
     // que os valores do "tokens/globals" serão sobrescritos pelos da marca.
 
     source: [`tokens/brands/${brand}/*.json`],
-    include: [`tokens/globals/styleguide/*.json`, `tokens/globals/plugins/*.json`],
+
+    include: [`tokens/replacers/*.json`, `tokens/plugin/*.json`],
+
+    transform: {
+      "spacing/pxToRem": { ...StyleDictionary.transform["spacing/pxToRem"], transitive: true },
+      "size/pxToRem": { ...StyleDictionary.transform["size/pxToRem"], transitive: true, matcher: isSize }
+    },
+
     platforms: {
-      css: {
-        transforms: cssTransforms,
-        buildPath: `build/css/brands/${brand}/styleguide/`,
-        files: [
-          {
-            name: "colors",
-            destination: `colors.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isColors`,
-          },
-          {
-            name: "borders",
-            destination: `borders.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBorders`,
-          },
-          {
-            name: "fonts",
-            destination: `fonts.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isFonts`,
-          },
-          {
-            name: "breakpoints",
-            destination: `breakpoints.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBreakpoints`,
-          },
-          {
-            name: "opacities",
-            destination: `opacities.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isOpacities`,
-          },
-          {
-            name: "radius",
-            destination: `radius.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isRadius`,
-          },
-          {
-            name: "shadows",
-            destination: `shadows.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isShadows`,
-          },
-          {
-            name: "sizes",
-            destination: `sizes.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSizes`,
-          },
-          {
-            name: "spacings",
-            destination: `spacings.css`,
-            format: "css/variables",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSpacings`,
-          },
-        ],
-      },
-      js: {
-        transforms: rnTransforms,
-        buildPath: `build/js/brands/${brand}/styleguide/`,
+      rn: {
+        transforms: transformations,
+        buildPath: `build/rn/${brand}/`,
         files: [
           {
             name: "colors",
@@ -306,16 +340,6 @@ function getStyleDictionaryStyleguideConfig(brand) {
             filter: `isColors`,
           },
           {
-            name: "borders",
-            destination: `borders.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBorders`,
-          },
-          {
             name: "fonts",
             destination: `fonts.js`,
             format: "javascript/reactnative",
@@ -326,24 +350,64 @@ function getStyleDictionaryStyleguideConfig(brand) {
             filter: `isFonts`,
           },
           {
-            name: "breakpoints",
-            destination: `breakpoints.js`,
+            name: "spacing",
+            destination: `spacing.js`,
             format: "javascript/reactnative",
             options: {
               outputReferences: outputReferences,
               fileHeader: tokenHeader,
             },
-            filter: `isBreakpoints`,
+            filter: `isSpacing`,
           },
           {
-            name: "opacities",
-            destination: `opacities.js`,
+            name: "size",
+            destination: `size.js`,
             format: "javascript/reactnative",
             options: {
               outputReferences: outputReferences,
               fileHeader: tokenHeader,
             },
-            filter: `isOpacities`,
+            filter: `isSize`,
+          },
+          {
+            name: "breakpoint",
+            destination: `breakpoint.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            name: "effects",
+            destination: `effects.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            name: "opacity",
+            destination: `opacity.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            name: "borders",
+            destination: `borders.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
           },
           {
             name: "radius",
@@ -355,83 +419,197 @@ function getStyleDictionaryStyleguideConfig(brand) {
             },
             filter: `isRadius`,
           },
-          {
-            name: "shadows",
-            destination: `shadows.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isShadows`,
-          },
-          {
-            name: "sizes",
-            destination: `sizes.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSizes`,
-          },
-          {
-            name: "spacings",
-            destination: `spacings.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSpacings`,
-          },
         ],
       },
-    },
-  };
-}
-
-//================================================//
-
-//Criação da função que gera os componentes
-
-function getStyleDictionaryComponentConfig(brand, component) {
-  return {
-    source: [
-      `tokens/brands/${brand}/*.json`,
-      `tokens/globals/component/*.json`,
-    ],
-    include: [`tokens/globals/styleguide/*.json`, `tokens/globals/plugins/*.json`],
-    platforms: {
-      css: {
-        transforms: cssTransforms,
-        buildPath: `build/css/brands/${brand}/component/`,
+      json: {
+        transforms: transformations,
+        buildPath: `build/json/${brand}/`,
         files: [
           {
-            name: component,
-            destination: `${component}.css`,
-            format: "css/variables",
+            name: "colors",
+            destination: `colors.json`,
+            format: "json/flat",
             options: {
               outputReferences: outputReferences,
               fileHeader: tokenHeader,
             },
-            filter: `is${capitalizeFirstLetter(component)}`,
+            filter: `isColors`,
+          },
+          {
+            name: "fonts",
+            destination: `fonts.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            name: "spacing",
+            destination: `spacing.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacing`,
+          },
+          {
+            name: "size",
+            destination: `size.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSize`,
+          },
+          {
+            name: "breakpoint",
+            destination: `breakpoint.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            name: "effects",
+            destination: `effects.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            name: "opacity",
+            destination: `opacity.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            name: "borders",
+            destination: `borders.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            name: "radius",
+            destination: `radius.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
           },
         ],
       },
       js: {
-        transforms: rnTransforms,
-        buildPath: `build/js/brands/${brand}/component/`,
+        transforms: transformations,
+        buildPath: `build/js/${brand}/`,
         files: [
           {
-            name: component,
-            destination: `${component}.js`,
-            format: "javascript/reactnative",
+            name: "colors",
+            destination: `colors.js`,
+            format: "javascript/module-flat",
             options: {
               outputReferences: outputReferences,
               fileHeader: tokenHeader,
             },
-            filter: `is${capitalizeFirstLetter(component)}`,
+            filter: `isColors`,
+          },
+          {
+            name: "fonts",
+            destination: `fonts.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            name: "spacing",
+            destination: `spacing.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacing`,
+          },
+          {
+            name: "size",
+            destination: `size.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSize`,
+          },
+          {
+            name: "breakpoint",
+            destination: `breakpoint.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            name: "effects",
+            destination: `effects.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            name: "opacity",
+            destination: `opacity.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            name: "borders",
+            destination: `borders.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            name: "radius",
+            destination: `radius.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
           },
         ],
       },
@@ -453,24 +631,10 @@ brandFolders.map(function (brand) {
 
   //Geração dos tokens de styleguide de cada marca
 
-  console.log(`-------\nProcessing ${brand} styleguides`);
   StyleDictionary.extend(
-    getStyleDictionaryStyleguideConfig(brand)
+    getStyleDictionaryStyles(brand)
   ).buildAllPlatforms();
 
-  console.log(`\nEnd ${brand} styleguides.`);
-  console.log("\n==============================================");
-  console.log(`\nProcessing ${brand} components...\n`);
-
-  //Mapeamento dos arquivos dos componentes para gerar os tokens de cada aplicação
-
-  componentList.map(function (component) {
-    console.log(`-------\nProcessing ${component}`);
-    StyleDictionary.extend(
-      getStyleDictionaryComponentConfig(brand, component)
-    ).buildAllPlatforms();
-  });
-  console.log(`\nEnd ${brand} components.`);
   console.log("\n==============================================");
   console.log(`\nEnd ${brand} processing.`);
 });
