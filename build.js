@@ -11,9 +11,9 @@ function getBasePxFontSize(options) {
 
 //Concentrando açgumas settings e transformações dos tokens em uma só variável
 
-const transformations = [
-  "attribute/cti",
+const kebabTransformation = [
   "name/ti/kebab",
+  "attribute/cti",
   "attribute/color",
   "color/css",
   "time/seconds",
@@ -24,6 +24,22 @@ const transformations = [
   "border/pxToRem",
   "radius/pxToRem"
 ];
+
+const constantTransformation = [
+  "name/ti/constant",
+  "attribute/cti",
+  "attribute/color",
+  "color/css",
+  "time/seconds",
+  "breakpoint/px",
+  "font/rem",
+  "spacing/pxToRem",
+  "size/pxToRem",
+  "border/pxToRem",
+  "radius/pxToRem"
+];
+
+
 
 const outputReferences = false;
 const tokenHeader = "tokenHeader";
@@ -326,7 +342,7 @@ function getStyleDictionaryStyles(brand) {
 
     platforms: {
       rn: {
-        transforms: transformations,
+        transforms: kebabTransformation,
         buildPath: `build/rn/${brand}/`,
         files: [
           {
@@ -422,7 +438,7 @@ function getStyleDictionaryStyles(brand) {
         ],
       },
       json: {
-        transforms: transformations,
+        transforms: kebabTransformation,
         buildPath: `build/json/${brand}/`,
         files: [
           {
@@ -518,8 +534,104 @@ function getStyleDictionaryStyles(brand) {
         ],
       },
       js: {
-        transforms: transformations,
+        transforms: kebabTransformation,
         buildPath: `build/js/${brand}/`,
+        files: [
+          {
+            name: "colors",
+            destination: `colors.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isColors`,
+          },
+          {
+            name: "fonts",
+            destination: `fonts.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            name: "spacing",
+            destination: `spacing.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacing`,
+          },
+          {
+            name: "size",
+            destination: `size.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSize`,
+          },
+          {
+            name: "breakpoint",
+            destination: `breakpoint.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            name: "effects",
+            destination: `effects.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            name: "opacity",
+            destination: `opacity.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            name: "borders",
+            destination: `borders.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            name: "radius",
+            destination: `radius.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
+          },
+        ],
+      },
+      jsc: {
+        transforms: constantTransformation,
+        buildPath: `build/jsc/${brand}/`,
         files: [
           {
             name: "colors",
