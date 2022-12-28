@@ -14,7 +14,7 @@
           "type": "string"
         },
         "fontFamily": {
-          "value": "Poppins",
+          "value": "Sharon Sans",
           "type": "string"
         },
         "fontWeight": {
@@ -71,7 +71,7 @@
           "type": "string"
         },
         "fontFamily": {
-          "value": "Poppins",
+          "value": "Sharon Sans",
           "type": "string"
         },
         "fontWeight": {
@@ -128,7 +128,7 @@
           "type": "string"
         },
         "fontFamily": {
-          "value": "Lato",
+          "value": "Sharon Sans",
           "type": "string"
         },
         "fontWeight": {
@@ -185,7 +185,7 @@
           "type": "string"
         },
         "fontFamily": {
-          "value": "Poppins",
+          "value": "Sharon Sans",
           "type": "string"
         },
         "fontWeight": {
@@ -242,7 +242,7 @@
           "type": "string"
         },
         "fontFamily": {
-          "value": "Poppins",
+          "value": "Sharon Sans",
           "type": "string"
         },
         "fontWeight": {
@@ -301,7 +301,7 @@
           "type": "string"
         },
         "fontFamily": {
-          "value": "Lato",
+          "value": "Sharon Sans",
           "type": "string"
         },
         "fontWeight": {
@@ -358,7 +358,7 @@
           "type": "string"
         },
         "fontFamily": {
-          "value": "Lato",
+          "value": "Sharon Sans",
           "type": "string"
         },
         "fontWeight": {
@@ -418,7 +418,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -475,7 +475,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -532,7 +532,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -589,7 +589,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -646,7 +646,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -819,7 +819,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -876,7 +876,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -933,7 +933,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -990,7 +990,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1047,7 +1047,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1220,7 +1220,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1277,7 +1277,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1334,7 +1334,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1391,7 +1391,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1448,7 +1448,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1621,7 +1621,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1678,7 +1678,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1735,7 +1735,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1792,7 +1792,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -1849,7 +1849,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -2022,7 +2022,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -2079,7 +2079,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -2136,7 +2136,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -2193,7 +2193,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
@@ -2250,7 +2250,7 @@
             "type": "string"
           },
           "fontFamily": {
-            "value": "Lato",
+            "value": "Sharon Sans",
             "type": "string"
           },
           "fontWeight": {
