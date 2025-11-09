@@ -7,14 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- Fixed 6 security vulnerabilities in dependencies (1 critical, 4 high, 1 low)
+  - ansi-regex: Regular Expression Complexity vulnerability
+  - brace-expansion: ReDoS vulnerability
+  - braces: Uncontrolled resource consumption
+  - json5: Prototype Pollution
+  - minimatch: ReDoS vulnerability
+  - minimist: Prototype Pollution (critical)
+
+### Changed
+- Updated style-dictionary from 3.0.2 to 3.9.2 (latest v3.x)
+  - Includes bug fixes and improvements
+  - No breaking changes
+- Updated multiple transitive dependencies via `npm audit fix`
+
 ### Added
 - Comprehensive README documentation with bilingual support (English and Portuguese)
 - JSDoc documentation for all functions and transforms in build.js
 - Inline code comments explaining complex logic
 - ARCHITECTURE.md with system design documentation
 - This CHANGELOG.md to track project changes
+- Documentation of future upgrade path to v4/v5
 
-### Changed
+### Note on Future Upgrades
+- **Style Dictionary v4.x** (Available but not yet adopted)
+  - Requires migration to ES Modules (`import` instead of `require`)
+  - Style Dictionary becomes a class (requires `new` keyword)
+  - Many methods become asynchronous
+  - Requires code rewrite - planned for future major release
+  - See: https://v4.styledictionary.com/version-4/migration/
+
+- **Style Dictionary v5.x** (Available but not yet adopted)
+  - Requires Node.js 22+ ✅ (current version: v22.21.1)
+  - Builds on v4 with additional token reference restrictions
+  - Requires v4 migration first
+  - See: https://styledictionary.com/versions/v5/migration/
+
+### Fixed
 - Improved code organization with clear section headers in build.js
 
 ## [1.0.0] - 2024-11-09
