@@ -1,0 +1,18 @@
+{
+  "color": {
+    "brand": {
+      "primary": {
+        "value": "#00A868",
+        "type": "color",
+        "category": "color",
+        "exportKey": "color"
+      },
+      "secondary": {
+        "value": "#004D29",
+        "type": "color",
+        "category": "color",
+        "exportKey": "color"
+      }
+    }
+  }
+}
