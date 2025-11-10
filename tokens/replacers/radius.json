@@ -2,43 +2,43 @@
     "radius": {
         "none": {
             "category": "radius",
-            "value": "{radii.none.radii.topLeft.value}"
+            "value": "{radii.none.radii.topLeft}"
         },
         "small": {
             "category": "radius",
-            "value": "{radii.small.radii.topLeft.value}"
+            "value": "{radii.small.radii.topLeft}"
         },
         "regular": {
             "category": "radius",
-            "value": "{radii.regular.radii.topLeft.value}"
+            "value": "{radii.regular.radii.topLeft}"
         },
         "medium": {
             "category": "radius",
-            "value": "{radii.medium.radii.topLeft.value}"
+            "value": "{radii.medium.radii.topLeft}"
         },
         "large": {
             "category": "radius",
-            "value": "{radii.large.radii.topLeft.value}"
+            "value": "{radii.large.radii.topLeft}"
         },
         "larger": {
             "category": "radius",
-            "value": "{radii.larger.radii.topLeft.value}"
+            "value": "{radii.larger.radii.topLeft}"
         },
         "extra-large": {
             "category": "radius",
-            "value": "{radii.extra-large.radii.topLeft.value}"
+            "value": "{radii.extra-large.radii.topLeft}"
         },
         "huge": {
             "category": "radius",
-            "value": "{radii.huge.radii.topLeft.value}"
+            "value": "{radii.huge.radii.topLeft}"
         },
         "hugest": {
             "category": "radius",
-            "value": "{radii.hugest.radii.topLeft.value}"
+            "value": "{radii.hugest.radii.topLeft}"
         },
         "full": {
             "category": "radius",
-            "value": "{radii.full.radii.topLeft.value}"
+            "value": "{radii.full.radii.topLeft}"
         }
     }
 }

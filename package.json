@@ -1,12 +1,12 @@
 {
   "name": "pagarme-tokens",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Style Dictionary for Pagar.me Banking App and Platforms",
   "type": "module",
   "main": "index.js",
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
-    "style-dictionary": "^4.4.0"
+    "style-dictionary": "^5.1.1"
   },
   "scripts": {
     "build": "node build.js",

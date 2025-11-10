@@ -7,6 +7,58 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2024-11-10
+
+### BREAKING CHANGES
+- **Migrated to Style Dictionary v5.1.1**
+  - Token references no longer support `.value` suffix
+  - All token references must reference tokens directly without `.value`
+  - Requires Node.js 18+ (v22+ recommended for optimal performance)
+  - Builds on v4 with stricter token reference validation
+
+### Changed
+- **Token Reference System**
+  - Removed `.value` suffix from all 70 token references across replacer files
+  - Updated `tokens/replacers/spacing.json` - Fixed 51 references
+  - Updated `tokens/replacers/radius.json` - Fixed 10 references
+  - Updated `tokens/replacers/borders.json` - Fixed 7 references
+  - Token references now use direct paths (e.g., `{spacing.zero.top}` instead of `{spacing.zero.top.value}`)
+- **Dependencies**
+  - Updated style-dictionary from 4.4.0 to 5.1.1 (major version bump)
+  - All existing dependencies remain compatible
+- **Build Process**
+  - Build process remains async with enhanced token validation
+  - Better error reporting for circular and missing references
+  - Verbose logging available for debugging reference issues
+
+### Added
+- Stricter token reference validation preventing invalid references
+- Enhanced error messages for token resolution issues
+- Verbose logging option for debugging token reference problems
+
+### Fixed
+- All token references updated to v5 specification
+- Removed deprecated `.value` suffix from all reference paths
+- Token resolution now works correctly with v5 validation rules
+
+### Migration Notes
+**For Users**:
+- Output token files remain unchanged - no action needed
+- All 4 platforms (rn, json, js, jsc) continue to work identically
+- Token values and structure remain the same
+
+**For Developers**:
+- If using token references in custom tokens, remove `.value` suffix
+- Change `{token.path.value}` to `{token.path}`
+- See official v5 migration guide: https://styledictionary.com/versions/v5/migration/
+
+**Testing**:
+- ✅ All 36 output files generate successfully
+- ✅ px-to-rem transformations working correctly
+- ✅ Custom filters and formats functional
+- ✅ CONSTANT_CASE and kebab-case naming both working
+- ✅ All token references resolve correctly
+
 ## [2.0.0] - 2024-11-10
 
 ### BREAKING CHANGES

@@ -3,7 +3,7 @@
         "none": {
             "category": "borders",
             "weight": {
-                "value": "{borders.none.strokeWeight.value}"
+                "value": "{borders.none.strokeWeight}"
             },
             "style": {
                 "value": "none"
@@ -12,7 +12,7 @@
         "regular": {
             "category": "borders",
             "weight": {
-                "value": "{borders.regular.strokeWeight.value}"
+                "value": "{borders.regular.strokeWeight}"
             },
             "style": {
                 "value": "solid"
@@ -21,7 +21,7 @@
         "medium": {
             "category": "borders",
             "weight": {
-                "value": "{borders.medium.strokeWeight.value}"
+                "value": "{borders.medium.strokeWeight}"
             },
             "style": {
                 "value": "solid"
@@ -30,7 +30,7 @@
         "large": {
             "category": "borders",
             "weight": {
-                "value": "{borders.large.strokeWeight.value}"
+                "value": "{borders.large.strokeWeight}"
             },
             "style": {
                 "value": "solid"
@@ -39,7 +39,7 @@
         "dashed-regular": {
             "category": "borders",
             "weight": {
-                "value": "{borders.dashed-regular.strokeWeight.value}"
+                "value": "{borders.dashed-regular.strokeWeight}"
             },
             "style": {
                 "value": "dashed"
@@ -48,7 +48,7 @@
         "dashed-medium": {
             "category": "borders",
             "weight": {
-                "value": "{borders.dashed-medium.strokeWeight.value}"
+                "value": "{borders.dashed-medium.strokeWeight}"
             },
             "style": {
                 "value": "dashed"
@@ -57,7 +57,7 @@
         "dashed-large": {
             "category": "borders",
             "weight": {
-                "value": "{borders.dashed-large.strokeWeight.value}"
+                "value": "{borders.dashed-large.strokeWeight}"
             },
             "style": {
                 "value": "dashed"
