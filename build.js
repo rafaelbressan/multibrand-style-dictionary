@@ -1,16 +1,17 @@
 /**
- * @file Build configuration for multibrand design tokens using Style Dictionary
+ * @file Build configuration for multibrand design tokens using Style Dictionary v4
  * @description This file configures Style Dictionary to generate design tokens for multiple brands.
  * It includes custom transforms for pixel-to-rem conversions, custom filters to organize tokens
  * by category, and multiple output formats (React Native, JavaScript, JSON).
  *
- * @see {@link https://amzn.github.io/style-dictionary/|Style Dictionary Documentation}
+ * @see {@link https://styledictionary.com/|Style Dictionary Documentation}
  */
 
-// Import Style Dictionary and helpers
-const StyleDictionary = require("style-dictionary");
-const _ = require("lodash");
-const { fileHeader } = StyleDictionary.formatHelpers;
+// Import Style Dictionary and helpers (ES Modules)
+import StyleDictionary from 'style-dictionary';
+import { fileHeader } from 'style-dictionary/utils';
+import _ from 'lodash';
+import fs from 'fs';
 
 /**
  * Get the base font size for rem calculations
@@ -51,7 +52,7 @@ const kebabTransformation = [
  * @type {string[]}
  */
 const constantTransformation = [
-  "name/ti/constant",     // Style Dictionary built-in CONSTANT_CASE naming
+  "name/constant",        // Style Dictionary v4 CONSTANT_CASE naming
   "attribute/cti",        // Add category/type/item attributes
   "attribute/color",      // Add color-specific attributes
   "color/css",            // Convert colors to CSS format
@@ -81,29 +82,12 @@ const tokenHeader = "tokenHeader";
 // Brand Discovery
 //================================================//
 
-const fs = require("fs");
-
 /**
  * Array of brand folder names found in tokens/brands/
  * Each brand folder should contain token override files
  * @type {string[]}
  */
 const brandFolders = fs.readdirSync("./tokens/brands");
-
-//================================================//
-// Custom File Header
-//================================================//
-
-/**
- * Register a custom file header for all generated token files
- * Adds "Made by Pagar.me BaaS" to the default Style Dictionary header
- */
-StyleDictionary.registerFileHeader({
-  name: "tokenHeader",
-  fileHeader: function (defaultMessage) {
-    return [...defaultMessage, `Made by Pagar.me BaaS`];
-  },
-});
 
 //================================================//
 // Token Filter Functions
@@ -246,67 +230,489 @@ function isRadius(token) {
 }
 
 //================================================//
-// Filter Registration
+// Style Dictionary Configuration Function
 //================================================//
 
-// Register color filter
+/**
+ * Generate Style Dictionary configuration for a specific brand
+ * @param {string} brand - Brand name (folder name in tokens/brands/)
+ * @returns {Object} Style Dictionary configuration object
+ * @description
+ * Creates a Style Dictionary configuration with:
+ * - Source files from brand-specific folder (overrides)
+ * - Include files from replacers and plugin folders (base tokens)
+ * - Custom transforms for size and spacing conversions
+ * - Multiple platform outputs (React Native, JavaScript, JSON)
+ *
+ * Token Resolution Order:
+ * 1. Plugin tokens (tokens/plugin/*.json) - Base from Figma
+ * 2. Replacer tokens (tokens/replacers/*.json) - Semantic mappings
+ * 3. Brand tokens (tokens/brands/[brand]/*.json) - Brand overrides
+ *
+ * Brand tokens override replacer and plugin tokens with the same path.
+ */
+function getStyleDictionaryConfig(brand) {
+  return {
+    // Source files (brand-specific): These override included files
+    // Add brand-specific token files (colors, fonts, etc.) to tokens/brands/[brand]/
+    // These values will override tokens from "include" files
+    source: [`tokens/brands/${brand}/*.json`],
+
+    // Include files (base tokens): These are loaded first
+    // - replacers: Semantic token mappings
+    // - plugin: Base design tokens from Figma
+    include: [`tokens/replacers/*.json`, `tokens/plugin/*.json`],
+
+    // Log configuration
+    log: {
+      warnings: 'warn',
+      verbosity: 'default'
+    },
+
+    // Preprocessor for handling transitive transforms (v4 compatible)
+    preprocessors: [],
+
+    // Platform configurations: Define output formats for different platforms
+    platforms: {
+      /**
+       * React Native Platform
+       * Outputs tokens in custom React Native format with kebab-case naming
+       * Build path: build/rn/[brand]/
+       */
+      rn: {
+        transforms: kebabTransformation,
+        buildPath: `build/rn/${brand}/`,
+        files: [
+          {
+            destination: `colors.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isColors`,
+          },
+          {
+            destination: `fonts.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            destination: `spacing.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacing`,
+          },
+          {
+            destination: `size.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSize`,
+          },
+          {
+            destination: `breakpoint.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            destination: `effects.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            destination: `opacity.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            destination: `borders.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            destination: `radius.js`,
+            format: "javascript/reactnative",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
+          },
+        ],
+      },
+      /**
+       * JSON Platform
+       * Outputs tokens in flat JSON format with kebab-case naming
+       * Build path: build/json/[brand]/
+       * Format: { "color-base-turquoise-20": "rgba(...)" }
+       */
+      json: {
+        transforms: kebabTransformation,
+        buildPath: `build/json/${brand}/`,
+        files: [
+          {
+            destination: `colors.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isColors`,
+          },
+          {
+            destination: `fonts.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            destination: `spacing.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacing`,
+          },
+          {
+            destination: `size.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSize`,
+          },
+          {
+            destination: `breakpoint.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            destination: `effects.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            destination: `opacity.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            destination: `borders.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            destination: `radius.json`,
+            format: "json/flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
+          },
+        ],
+      },
+      /**
+       * JavaScript Platform (kebab-case)
+       * Outputs tokens as ES6 modules with kebab-case naming
+       * Build path: build/js/[brand]/
+       * Format: export const colorBaseTurquoise20 = "rgba(...)";
+       */
+      js: {
+        transforms: kebabTransformation,
+        buildPath: `build/js/${brand}/`,
+        files: [
+          {
+            destination: `colors.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isColors`,
+          },
+          {
+            destination: `fonts.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            destination: `spacing.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacing`,
+          },
+          {
+            destination: `size.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSize`,
+          },
+          {
+            destination: `breakpoint.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            destination: `effects.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            destination: `opacity.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            destination: `borders.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            destination: `radius.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
+          },
+        ],
+      },
+      /**
+       * JavaScript Constant Platform (CONSTANT_CASE)
+       * Outputs tokens as ES6 modules with CONSTANT_CASE naming
+       * Build path: build/jsc/[brand]/
+       * Format: export const COLOR_BASE_TURQUOISE_20 = "rgba(...)";
+       */
+      jsc: {
+        transforms: constantTransformation,
+        buildPath: `build/jsc/${brand}/`,
+        files: [
+          {
+            destination: `colors.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isColors`,
+          },
+          {
+            destination: `fonts.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isFonts`,
+          },
+          {
+            destination: `spacing.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSpacing`,
+          },
+          {
+            destination: `size.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isSize`,
+          },
+          {
+            destination: `breakpoint.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBreakpoint`,
+          },
+          {
+            destination: `effects.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isEffects`,
+          },
+          {
+            destination: `opacity.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isOpacity`,
+          },
+          {
+            destination: `borders.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isBorders`,
+          },
+          {
+            destination: `radius.js`,
+            format: "javascript/module-flat",
+            options: {
+              outputReferences: outputReferences,
+              fileHeader: tokenHeader,
+            },
+            filter: `isRadius`,
+          },
+        ],
+      },
+    },
+  };
+}
+
+//================================================//
+// Custom Hooks Registration (V4 API)
+//================================================//
+
+/**
+ * Register custom file header hook
+ * Adds "Made by Pagar.me BaaS" to the default Style Dictionary header
+ */
+StyleDictionary.registerFileHeader({
+  name: "tokenHeader",
+  fileHeader: function (defaultMessage) {
+    return [...defaultMessage, `Made by Pagar.me BaaS`];
+  },
+});
+
+// Register all custom filters
 StyleDictionary.registerFilter({
   name: "isColors",
-  matcher: isColor
+  filter: isColor
 });
 
-// Register font family filter
 StyleDictionary.registerFilter({
   name: "isFonts",
-  matcher: isFonts
+  filter: isFonts
 });
 
-// Register font styles filter (fontSize, lineHeight, letterSpacing)
 StyleDictionary.registerFilter({
   name: "isFontStyles",
-  matcher: isFontStyles
+  filter: isFontStyles
 });
 
-// Register spacing filter
 StyleDictionary.registerFilter({
   name: "isSpacing",
-  matcher: isSpacing
+  filter: isSpacing
 });
 
-// Register size filter
 StyleDictionary.registerFilter({
   name: "isSize",
-  matcher: isSize
+  filter: isSize
 });
 
-// Register breakpoint filter
 StyleDictionary.registerFilter({
   name: "isBreakpoint",
-  matcher: isBreakpoint
+  filter: isBreakpoint
 });
 
-// Register effects (shadows) filter
 StyleDictionary.registerFilter({
   name: "isEffects",
-  matcher: isEffects
+  filter: isEffects
 });
 
-// Register opacity filter
 StyleDictionary.registerFilter({
   name: "isOpacity",
-  matcher: isOpacity
+  filter: isOpacity
 });
 
-// Register borders filter
 StyleDictionary.registerFilter({
   name: "isBorders",
-  matcher: isBorders
+  filter: isBorders
 });
 
-// Register radius filter
 StyleDictionary.registerFilter({
   name: "isRadius",
-  matcher: isRadius
+  filter: isRadius
 });
 
 //================================================//
@@ -320,7 +726,7 @@ StyleDictionary.registerFilter({
  */
 StyleDictionary.registerFormat({
   name: "javascript/reactnative",
-  formatter: function ({ dictionary, file }) {
+  format: function ({ dictionary, file }) {
     return (
       fileHeader({ file }) +
       "export default " +
@@ -344,7 +750,7 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerTransform({
   name: 'name/ti/kebab',
   type: 'name',
-  transformer: function (token, options) {
+  transform: function (token, options) {
     return (_.kebabCase([options.prefix].concat(token.path.slice(1, token.path.length)).join(' ')));
   }
 });
@@ -352,23 +758,19 @@ StyleDictionary.registerTransform({
 /**
  * Register font value to rem transform
  * Converts fontSize, lineHeight, and letterSpacing from pixels to rem
- * @property {string} name - Transform name: 'font/rem'
- * @property {string} type - Transform type: 'value'
- * @property {Function} matcher - Uses isFontStyles matcher
- * @property {boolean} transitive - Apply to referenced tokens
- * @property {Function} transformer - Conversion function (px to rem)
  */
 StyleDictionary.registerTransform({
   name: 'font/rem',
   type: 'value',
-  matcher: isFontStyles,
+  filter: isFontStyles,
   transitive: true,
-  transformer: (token, options) => {
+  transform: (token, options) => {
     const baseFont = getBasePxFontSize(options);
     const floatVal = parseFloat(token.value);
 
     if (isNaN(floatVal)) {
-      throwSizeError(token.name, token.value, 'rem');
+      console.error(`Invalid font value for ${token.name}: ${token.value}`);
+      return token.value;
     }
 
     if (floatVal === 0) {
@@ -382,21 +784,18 @@ StyleDictionary.registerTransform({
 /**
  * Register spacing value to rem transform
  * Converts spacing/padding/margin values from pixels to rem
- * @property {string} name - Transform name: 'spacing/pxToRem'
- * @property {string} type - Transform type: 'value'
- * @property {Function} matcher - Uses isSpacing matcher
- * @property {Function} transformer - Conversion function (px to rem)
  */
 StyleDictionary.registerTransform({
   name: 'spacing/pxToRem',
   type: 'value',
-  matcher: isSpacing,
-  transformer: (token, options) => {
+  filter: isSpacing,
+  transform: (token, options) => {
     const baseFont = getBasePxFontSize(options);
     const floatVal = parseFloat(token.value);
 
     if (isNaN(floatVal)) {
-      throwSizeError(token.name, token.value, 'rem');
+      console.error(`Invalid spacing value for ${token.name}: ${token.value}`);
+      return token.value;
     }
 
     if (floatVal === 0) {
@@ -410,20 +809,17 @@ StyleDictionary.registerTransform({
 /**
  * Register breakpoint value to px transform
  * Ensures breakpoint values have px units
- * @property {string} name - Transform name: 'breakpoint/px'
- * @property {string} type - Transform type: 'value'
- * @property {Function} matcher - Uses isBreakpoint matcher
- * @property {Function} transformer - Adds px suffix
  */
 StyleDictionary.registerTransform({
   name: 'breakpoint/px',
   type: 'value',
-  matcher: isBreakpoint,
-  transformer: (token) => {
+  filter: isBreakpoint,
+  transform: (token) => {
     const floatVal = parseFloat(token.value);
 
     if (isNaN(floatVal)) {
-      throwSizeError(token.name, token.value, 'px');
+      console.error(`Invalid breakpoint value for ${token.name}: ${token.value}`);
+      return token.value;
     }
 
     if (floatVal === 0) {
@@ -437,23 +833,19 @@ StyleDictionary.registerTransform({
 /**
  * Register border width to rem transform
  * Converts border-weight values from pixels to rem
- * @property {string} name - Transform name: 'border/pxToRem'
- * @property {string} type - Transform type: 'value'
- * @property {boolean} transitive - Apply to referenced tokens
- * @property {Function} matcher - Uses isBorderWeight matcher
- * @property {Function} transformer - Conversion function (px to rem)
  */
 StyleDictionary.registerTransform({
   name: 'border/pxToRem',
   type: 'value',
   transitive: true,
-  matcher: isBorderWeight,
-  transformer: (token, options) => {
+  filter: isBorderWeight,
+  transform: (token, options) => {
     const baseFont = getBasePxFontSize(options);
     const floatVal = parseFloat(token.value);
 
     if (isNaN(floatVal)) {
-      throwSizeError(token.name, token.value, 'rem');
+      console.error(`Invalid border value for ${token.name}: ${token.value}`);
+      return token.value;
     }
 
     if (floatVal === 0) {
@@ -467,23 +859,19 @@ StyleDictionary.registerTransform({
 /**
  * Register radius value to rem transform
  * Converts border-radius values from pixels to rem
- * @property {string} name - Transform name: 'radius/pxToRem'
- * @property {string} type - Transform type: 'value'
- * @property {boolean} transitive - Apply to referenced tokens
- * @property {Function} matcher - Uses isRadius matcher
- * @property {Function} transformer - Conversion function (px to rem)
  */
 StyleDictionary.registerTransform({
   name: 'radius/pxToRem',
   type: 'value',
   transitive: true,
-  matcher: isRadius,
-  transformer: (token, options) => {
+  filter: isRadius,
+  transform: (token, options) => {
     const baseFont = getBasePxFontSize(options);
     const floatVal = parseFloat(token.value);
 
     if (isNaN(floatVal)) {
-      throwSizeError(token.name, token.value, 'rem');
+      console.error(`Invalid radius value for ${token.name}: ${token.value}`);
+      return token.value;
     }
 
     if (floatVal === 0) {
@@ -495,485 +883,40 @@ StyleDictionary.registerTransform({
 });
 
 //================================================//
-// Style Dictionary Configuration Function
-//================================================//
-
-/**
- * Generate Style Dictionary configuration for a specific brand
- * @param {string} brand - Brand name (folder name in tokens/brands/)
- * @returns {Object} Style Dictionary configuration object
- * @description
- * Creates a Style Dictionary configuration with:
- * - Source files from brand-specific folder (overrides)
- * - Include files from replacers and plugin folders (base tokens)
- * - Custom transforms for size and spacing conversions
- * - Multiple platform outputs (React Native, JavaScript, JSON)
- *
- * Token Resolution Order:
- * 1. Plugin tokens (tokens/plugin/*.json) - Base from Figma
- * 2. Replacer tokens (tokens/replacers/*.json) - Semantic mappings
- * 3. Brand tokens (tokens/brands/[brand]/*.json) - Brand overrides
- *
- * Brand tokens override replacer and plugin tokens with the same path.
- */
-function getStyleDictionaryStyles(brand) {
-  return {
-    // Source files (brand-specific): These override included files
-    // Add brand-specific token files (colors, fonts, etc.) to tokens/brands/[brand]/
-    // These values will override tokens from "include" files
-    source: [`tokens/brands/${brand}/*.json`],
-
-    // Include files (base tokens): These are loaded first
-    // - replacers: Semantic token mappings
-    // - plugin: Base design tokens from Figma
-    include: [`tokens/replacers/*.json`, `tokens/plugin/*.json`],
-
-    // Transform overrides: Extend transforms with additional options
-    transform: {
-      "spacing/pxToRem": { ...StyleDictionary.transform["spacing/pxToRem"], transitive: true },
-      "size/pxToRem": { ...StyleDictionary.transform["size/pxToRem"], transitive: true, matcher: isSize }
-    },
-
-    // Platform configurations: Define output formats for different platforms
-    platforms: {
-      /**
-       * React Native Platform
-       * Outputs tokens in custom React Native format with kebab-case naming
-       * Build path: build/rn/[brand]/
-       */
-      rn: {
-        transforms: kebabTransformation,
-        buildPath: `build/rn/${brand}/`,
-        files: [
-          {
-            name: "colors",
-            destination: `colors.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isColors`,
-          },
-          {
-            name: "fonts",
-            destination: `fonts.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isFonts`,
-          },
-          {
-            name: "spacing",
-            destination: `spacing.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSpacing`,
-          },
-          {
-            name: "size",
-            destination: `size.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSize`,
-          },
-          {
-            name: "breakpoint",
-            destination: `breakpoint.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBreakpoint`,
-          },
-          {
-            name: "effects",
-            destination: `effects.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isEffects`,
-          },
-          {
-            name: "opacity",
-            destination: `opacity.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isOpacity`,
-          },
-          {
-            name: "borders",
-            destination: `borders.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBorders`,
-          },
-          {
-            name: "radius",
-            destination: `radius.js`,
-            format: "javascript/reactnative",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isRadius`,
-          },
-        ],
-      },
-      /**
-       * JSON Platform
-       * Outputs tokens in flat JSON format with kebab-case naming
-       * Build path: build/json/[brand]/
-       * Format: { "color-base-turquoise-20": "rgba(...)" }
-       */
-      json: {
-        transforms: kebabTransformation,
-        buildPath: `build/json/${brand}/`,
-        files: [
-          {
-            name: "colors",
-            destination: `colors.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isColors`,
-          },
-          {
-            name: "fonts",
-            destination: `fonts.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isFonts`,
-          },
-          {
-            name: "spacing",
-            destination: `spacing.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSpacing`,
-          },
-          {
-            name: "size",
-            destination: `size.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSize`,
-          },
-          {
-            name: "breakpoint",
-            destination: `breakpoint.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBreakpoint`,
-          },
-          {
-            name: "effects",
-            destination: `effects.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isEffects`,
-          },
-          {
-            name: "opacity",
-            destination: `opacity.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isOpacity`,
-          },
-          {
-            name: "borders",
-            destination: `borders.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBorders`,
-          },
-          {
-            name: "radius",
-            destination: `radius.json`,
-            format: "json/flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isRadius`,
-          },
-        ],
-      },
-      /**
-       * JavaScript Platform (kebab-case)
-       * Outputs tokens as ES6 modules with kebab-case naming
-       * Build path: build/js/[brand]/
-       * Format: export const colorBaseTurquoise20 = "rgba(...)";
-       */
-      js: {
-        transforms: kebabTransformation,
-        buildPath: `build/js/${brand}/`,
-        files: [
-          {
-            name: "colors",
-            destination: `colors.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isColors`,
-          },
-          {
-            name: "fonts",
-            destination: `fonts.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isFonts`,
-          },
-          {
-            name: "spacing",
-            destination: `spacing.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSpacing`,
-          },
-          {
-            name: "size",
-            destination: `size.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSize`,
-          },
-          {
-            name: "breakpoint",
-            destination: `breakpoint.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBreakpoint`,
-          },
-          {
-            name: "effects",
-            destination: `effects.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isEffects`,
-          },
-          {
-            name: "opacity",
-            destination: `opacity.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isOpacity`,
-          },
-          {
-            name: "borders",
-            destination: `borders.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBorders`,
-          },
-          {
-            name: "radius",
-            destination: `radius.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isRadius`,
-          },
-        ],
-      },
-      /**
-       * JavaScript Constant Platform (CONSTANT_CASE)
-       * Outputs tokens as ES6 modules with CONSTANT_CASE naming
-       * Build path: build/jsc/[brand]/
-       * Format: export const COLOR_BASE_TURQUOISE_20 = "rgba(...)";
-       */
-      jsc: {
-        transforms: constantTransformation,
-        buildPath: `build/jsc/${brand}/`,
-        files: [
-          {
-            name: "colors",
-            destination: `colors.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isColors`,
-          },
-          {
-            name: "fonts",
-            destination: `fonts.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isFonts`,
-          },
-          {
-            name: "spacing",
-            destination: `spacing.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSpacing`,
-          },
-          {
-            name: "size",
-            destination: `size.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isSize`,
-          },
-          {
-            name: "breakpoint",
-            destination: `breakpoint.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBreakpoint`,
-          },
-          {
-            name: "effects",
-            destination: `effects.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isEffects`,
-          },
-          {
-            name: "opacity",
-            destination: `opacity.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isOpacity`,
-          },
-          {
-            name: "borders",
-            destination: `borders.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isBorders`,
-          },
-          {
-            name: "radius",
-            destination: `radius.js`,
-            format: "javascript/module-flat",
-            options: {
-              outputReferences: outputReferences,
-              fileHeader: tokenHeader,
-            },
-            filter: `isRadius`,
-          },
-        ],
-      },
-    },
-  };
-}
-
-//================================================//
-// Build Process Execution
+// Build Process Execution (V4 Async API)
 //================================================//
 
 console.log("Build started...");
 
 /**
- * Build tokens for each brand
+ * Build tokens for each brand (V4 async approach)
  * Iterates through all brand folders found in tokens/brands/
  * For each brand:
- * 1. Creates a Style Dictionary configuration
- * 2. Extends the configuration with brand-specific settings
- * 3. Builds all platforms (rn, json, js, jsc)
- * 4. Outputs generated files to build/[platform]/[brand]/
+ * 1. Creates a new Style Dictionary instance
+ * 2. Builds all platforms asynchronously
+ * 3. Outputs generated files to build/[platform]/[brand]/
  */
-brandFolders.map(function (brand) {
-  console.log("\n==============================================");
-  console.log(`\nProcessing ${brand} styles...\n`);
+async function buildAllBrands() {
+  for (const brand of brandFolders) {
+    console.log("\n==============================================");
+    console.log(`\nProcessing ${brand} styles...\n`);
 
-  // Generate tokens for all platforms for this brand
-  StyleDictionary.extend(
-    getStyleDictionaryStyles(brand)
-  ).buildAllPlatforms();
+    // V4 API: Create a new StyleDictionary instance
+    const sd = new StyleDictionary(getStyleDictionaryConfig(brand));
+
+    // V4 API: Build all platforms asynchronously
+    await sd.buildAllPlatforms();
+
+    console.log("\n==============================================");
+    console.log(`\nEnd ${brand} processing.`);
+  }
 
   console.log("\n==============================================");
-  console.log(`\nEnd ${brand} processing.`);
+  console.log("\nBuild completed.");
+}
+
+// Execute the async build process
+buildAllBrands().catch((error) => {
+  console.error("Build failed:", error);
+  process.exit(1);
 });
-
-console.log("\n==============================================");
-console.log("\nBuild completed.");

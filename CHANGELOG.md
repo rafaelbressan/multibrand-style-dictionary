@@ -7,6 +7,65 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-11-10
+
+### BREAKING CHANGES
+- **Migrated to Style Dictionary v4.4.0**
+  - Complete rewrite to ES Modules (import/export syntax)
+  - Async build process with class-based API
+  - Requires Node.js 18+ (current: v22.21.1)
+  - Projects customizing build.js must migrate to v4 API
+
+### Changed
+- **Migration to ES Modules**
+  - Added `"type": "module"` to package.json
+  - Converted all `require()` to `import` statements
+  - Build.js now uses ES6 module syntax throughout
+- **Style Dictionary v4 API Updates**
+  - Changed from `StyleDictionary.extend()` to `new StyleDictionary()`
+  - Build process is now asynchronous using `await`
+  - Updated filter API: `matcher:` → `filter:`
+  - Updated transform API: `transformer:` → `transform:`
+  - Updated format API: `formatter:` → `format:`
+  - Changed import path for utilities: `style-dictionary/utils`
+  - Updated transform name: `name/ti/constant` → `name/constant`
+- **Dependencies**
+  - Updated style-dictionary from 3.9.2 to 4.4.0 (major version bump)
+  - Added lodash as direct dependency (no longer bundled with style-dictionary)
+- **Build Process**
+  - Now uses async/await pattern for better error handling
+  - Improved error messages for transform failures
+  - Added error logging for invalid token values
+
+### Added
+- Comprehensive JSDoc documentation for v4 API changes
+- Error handling for invalid token values in custom transforms
+- V4-compatible configuration structure with new options
+- Better logging configuration in Style Dictionary config
+
+### Fixed
+- All transforms updated to v4 API specifications
+- File header import path corrected for v4
+- Custom format registration updated for v4 compatibility
+
+### Migration Notes
+**For Users**:
+- Output token files remain unchanged - no action needed
+- All 4 platforms (rn, json, js, jsc) continue to work identically
+
+**For Developers**:
+- If customizing build.js, migrate to ES Modules and v4 API
+- See official migration guide: https://v4.styledictionary.com/version-4/migration/
+- Update any scripts importing build.js to use ES6 imports
+
+**Testing**:
+- ✅ All 36 output files generate successfully
+- ✅ px-to-rem transformations working correctly
+- ✅ Custom filters and formats functional
+- ✅ CONSTANT_CASE and kebab-case naming both working
+
+## [1.1.0] - 2024-11-09
+
 ### Security
 - Fixed 6 security vulnerabilities in dependencies (1 critical, 4 high, 1 low)
   - ansi-regex: Regular Expression Complexity vulnerability

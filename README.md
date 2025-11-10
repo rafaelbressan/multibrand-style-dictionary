@@ -21,8 +21,10 @@ This project is a comprehensive Style Dictionary implementation for managing des
 
 ### Prerequisites
 
-- **Node.js**: v14 or higher
+- **Node.js**: v18 or higher (v22+ recommended)
 - **npm**: v6 or higher
+
+> **Important**: This project uses Style Dictionary v4 with ES Modules. Node.js 18+ is required.
 
 ### Installation
 
